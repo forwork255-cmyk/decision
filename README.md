@@ -19,7 +19,17 @@ It adapts effort to the decision (LIGHT / STANDARD / DEEP / MAX) and degrades gr
 
 ## Install
 
-Copy the `decision-council/` folder into your agent platform's skills directory (e.g. `.claude/skills/` for Claude Code). Any host that implements the [Agent Skills open standard](https://agentskills.io/) can load it — the skill has no Claude-specific dependencies.
+There are three ways to get this skill. If you're not sure which to use, use the first one.
+
+**1. Recommended — download the release package.** Go to [Releases](https://github.com/forwork255-cmyk/universal-decision-council/releases), download `decision-council.zip` from the latest release, and unzip it. You'll get a folder already named exactly `decision-council/` — copy that whole folder into your agent platform's skills directory (e.g. `.claude/skills/`, so the final path is `.claude/skills/decision-council/`). No renaming needed.
+
+**2. Cloning this repository.** `git clone` puts the skill files directly in the folder you cloned into — but that folder is named `universal-decision-council` (this repo's name), not `decision-council`. Rename it to `decision-council` before copying it into your skills directory.
+
+**3. GitHub's "Code → Download ZIP" button.** This unpacks into a folder named `universal-decision-council-master/` — GitHub always names it after the repository and branch, never the skill. Rename the extracted folder to `decision-council` before installing it.
+
+Why the renaming matters for options 2 and 3: the [Agent Skills spec](https://agentskills.io/specification) requires a skill's `SKILL.md` `name:` field (here, `decision-council`) to exactly match its containing folder name. A folder named `universal-decision-council` or `universal-decision-council-master` won't match, and some hosts will refuse to load it. Option 1 sidesteps this entirely, which is why it's recommended for anyone who isn't already comfortable with this rule.
+
+Any host that implements the [Agent Skills open standard](https://agentskills.io/) can load this skill — it has no Claude-specific dependencies.
 
 ## Files
 

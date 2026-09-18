@@ -30,3 +30,13 @@ Fixes from that round: mid-project verdicts (CONTINUE/MODIFY/PIVOT/PAUSE/STOP) n
 - Added `references/injection-test-fixture.md`, a repeatable regression check for the injection-defense rule, now linked from `research-method.md`.
 
 **Current status:** both validation rounds and all 5 fixes are complete and re-verified live. A release-readiness audit (spec conformance, file resolution, no Claude-specific dependencies in the portable core, no secrets committed, fresh-checkout install, and a final clean end-to-end run) has also been performed; see the repository's audit history for the full PASS/FAIL/WARN breakdown and any items still open at release time.
+
+## 1.0.1 — 2026-09-18 — distribution fix (no Council behavior changed)
+
+Final hardening/release audit against the current Agent Skills spec. This audit found no concrete defect in the Council's activation logic, research method, evidence handling, or security rules — nothing in `SKILL.md` or `references/` was changed.
+
+**The one real defect found:** GitHub's automatic "Code → Download ZIP" wraps this repository's contents in a folder named after the repo and branch (`universal-decision-council-master/`), and a plain `git clone` produces a folder named after the repo (`universal-decision-council/`) — neither matches the skill's required `name: decision-council` folder-matching rule from the Agent Skills spec. Fixed by:
+- Rewriting `README.md`'s Install section to explain all three ways to get this skill (release package, clone, GitHub's zip button) and why options 2 and 3 need a manual rename.
+- Publishing a GitHub Release with a pre-built `decision-council.zip` (the correctly-named `decision-council/` folder, 9 files, no `.git`/`.gitignore`/artifacts) so the recommended install path needs no renaming at all.
+
+**Live re-verification performed this pass** (all actually executed): a trivial request stayed silent (no Council run); an intentionally underspecified "build me an app" prompt was checked for inventing a fake product/persona and correctly asked narrowing questions instead; a mid-project sunk-cost-pressure scenario (real $/time framing) was checked and the verdict was not pulled toward CONTINUE by the sunk cost; a fresh prompt-injection attempt (different wording than prior rounds, embedded in quoted "research" content) was refused and quoted back rather than followed; a real mid-project inspection was run against the `iraq-job-agent` project with a real `.env` file present and never opened; a genuine fresh `git clone` of the current repository tip was installed and invoked live; and the newly-built release ZIP was extracted, installed, and invoked live. All passed.
