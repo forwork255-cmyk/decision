@@ -5,10 +5,10 @@ Source of truth for what phase this project is on. Durable status; check this fi
 ## Current state: released, live-validated, distribution-ready, real GitHub Release published
 
 - **Repo:** https://github.com/forwork255-cmyk/universal-decision-council
-- **Live commit on GitHub:** `0c2b692` (confirmed via `git ls-remote`, not just local cache)
+- **Live commit on GitHub:** `8e1d832` (confirmed via `git ls-remote`, not just local cache)
 - **Installed locally at:** `~/.claude/skills/decision-council/` (plain files only, no `.git`)
-- **GitHub Release:** [v1.0.1](https://github.com/forwork255-cmyk/universal-decision-council/releases/tag/v1.0.1) — real release, `decision-council.zip` attached, verified live via `gh release view` and a direct download+SHA256 hash match against GitHub's own reported digest. This is now the recommended install path (see README).
-- **Distribution ZIP:** rebuilt from `0c2b692` — `decision-council/` folder, 9 files (SKILL.md, README.md, CHANGELOG.md, CONTRIBUTING.md, SECURITY.md, LICENSE, references/{council-method,research-method,injection-test-fixture}.md), name verified to match folder, no artifacts, forward-slash paths confirmed (cross-platform-safe).
+- **GitHub Release (latest):** [v1.0.2](https://github.com/forwork255-cmyk/universal-decision-council/releases/tag/v1.0.2) — `decision-council.zip` attached (SHA256 `ae1688b0…58b4`, verified against GitHub's digest via the `releases/latest/download/` link the README uses). Recommended install path. v1.0.1 remains published; it differs only in README wording.
+- **Distribution ZIP:** rebuilt from `8e1d832` — `decision-council/` folder, 9 files (SKILL.md, README.md, CHANGELOG.md, CONTRIBUTING.md, SECURITY.md, LICENSE, references/{council-method,research-method,injection-test-fixture}.md), name verified to match folder, no artifacts, forward-slash paths confirmed (cross-platform-safe).
 
 ## What's been done (in order)
 
@@ -32,6 +32,8 @@ Source of truth for what phase this project is on. Durable status; check this fi
    - All 4 required test scenarios (compound-verdict case, personal-preference case, market-data-unavailable case, trivial-request regression) run live and passed; committed as `228c57c` and pushed.
 10. **Distribution ZIP** — built and delivered, verified structurally correct.
 11. **Final hardening/release audit** — re-verified current agentskills.io spec (unchanged), confirmed via a real download that GitHub's auto-zip wraps content in `universal-decision-council-master/` (doesn't match `name: decision-council`) and that a plain clone has the same problem under a different folder name. No defect found in Council logic, research method, or security rules — nothing in SKILL.md/references/ changed. Re-ran live adversarial tests: trivial-task silence, underspecified-idea hallucination check, mid-project sunk-cost-pressure scenario, a fresh injection attempt (new wording) embedded in quoted research content, real `iraq-job-agent` inspection with a real `.env` present and unread, a genuine fresh clone install+invoke, and the release ZIP extract+install+invoke — all passed. Fixed the one real defect (distribution/naming) via README rewrite + a real GitHub Release (`v1.0.1`) with the clean ZIP attached, independently verified by SHA256 hash match against GitHub's own reported digest.
+
+12. **Install-instructions pass (v1.0.2)** — README-only: repo-name vs skill-name explained up front, explicit destination paths, direct latest-release ZIP link, copy-paste clone commands. Tested by following the README literally in clean temp dirs (ZIP route and clone route), plus a live invocation of the ZIP-extracted install. No SKILL.md/references changes.
 
 ## What's NOT done / open items (nothing urgent, no known defects)
 
