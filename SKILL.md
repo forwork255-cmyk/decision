@@ -76,6 +76,10 @@ When writing the final report (§7), map this onto the report's `Verdict:` line 
 
 Always resolve to exactly one of: **APPROVE / MODIFY / WAIT / REJECT**. Never hide behind "it depends" when a useful provisional call is possible. The verdict follows from evidence and argument quality, not a vote count.
 
+**When the decision is a choice among several named options** (e.g. "Auth0 vs. Clerk vs. Supabase Auth vs. build it ourselves"), put the recommended option in the `Decision:` line and let `Verdict:` express confidence in that pick: APPROVE = confidently recommend the named option, MODIFY = a hybrid or a variant not among the given options is better, WAIT = don't commit to any option yet, get specific missing evidence first, REJECT = none of the given options solve the underlying problem.
+
+**When evidence quality is LOW**, don't force a confident APPROVE/REJECT — if cheap validation could resolve the uncertainty, that's what WAIT is for. Only issue a confident call on weak evidence when validation genuinely isn't feasible and a provisional decision is still more useful than none.
+
 Report using this structure:
 
 ```
