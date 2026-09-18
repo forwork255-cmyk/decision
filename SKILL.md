@@ -101,12 +101,16 @@ Council Effort: LIGHT / STANDARD / DEEP / MAX
 ## Biggest Blind Spot
 ## Biggest Risk
 ## What Would Change the Verdict?
+## Sources
+[links/citations for load-bearing claims, when the host surfaced any — omit this section entirely if no external research was done]
 
 # ONE NEXT MOVE
 [the single most useful next action — not a task list]
 ```
 
 For LIGHT-depth calls, a shorter version of this (verdict + 3-4 key lines + one next move) is fine — don't force the full template on a small decision.
+
+Make the reasoning visible, not just the conclusion: what was researched, which evidence actually mattered, where it was weak, where the council disagreed and why. Don't expose private chain-of-thought — the sections above *are* the transparency, not a dump of intermediate reasoning.
 
 Close serious research-driven verdicts with:
 
