@@ -25,7 +25,12 @@ Copy the `decision-council/` folder into your agent platform's skills directory 
 
 - `SKILL.md` — the workflow the agent follows (loaded when the skill activates).
 - `references/council-method.md` — detail on the five perspectives, independence, and adversarial review.
-- `references/research-method.md` — source-quality tiers, evidence labeling, fabrication rules.
+- `references/research-method.md` — source-quality tiers, evidence labeling, fabrication rules, and the prompt-injection defense rule.
+- `references/injection-test-fixture.md` — a repeatable test case for checking the prompt-injection defense rule still holds.
+- `SECURITY.md` — this skill's attack surface and the one real risk to watch for.
+- `CONTRIBUTING.md` — guidelines for changing this skill.
+- `CHANGELOG.md` — release history and what's actually been validated.
+- `LICENSE` — MIT.
 
 ## Scope
 
