@@ -30,6 +30,10 @@ Match effort to the decision's importance. Say which depth you're using and why.
 
 Default to the smallest depth that can responsibly answer the question. Don't run MAX-depth analysis on a light decision.
 
+**At LIGHT depth**, when using only 2-3 of the five core perspectives (see §4), explicitly name which ones were dropped and why — e.g. "Outsider and Expansionist skipped: no external audience or upside question at stake here." Don't silently drop perspectives.
+
+`Council Effort` and `Evidence Quality` (see §7) measure two different things and must not be conflated: Council Effort is how much investigation/reasoning was actually performed (LIGHT/STANDARD/DEEP/MAX); Evidence Quality is how strong the evidence that was found turned out to be (LOW/MEDIUM/HIGH). A LIGHT-effort call can have HIGH evidence quality (the answer was obvious from a quick check), and a DEEP-effort call can still land on LOW evidence quality (thorough research found little).
+
 ## 2. Understand the decision
 
 Before researching anything, pin down:
@@ -43,6 +47,8 @@ Before researching anything, pin down:
 Make reasonable assumptions rather than interrogating the user with unnecessary questions. Label important assumptions explicitly instead of asking about everything.
 
 If project files, code, or prior context are available and relevant (mid-project decisions), inspect them before concluding anything about current state, architecture, or technical debt. Never claim to have inspected something you didn't.
+
+**Never open, read, quote, summarize, transmit, or expose the contents of files that plausibly contain secrets, credentials, API keys, passwords, private keys, or tokens** (e.g. `.env`, `credentials.json`, `*.pem`). It's fine to note that such a file exists — never inspect or repeat what's inside it.
 
 ## 3. Research reality (only what's relevant)
 
@@ -66,6 +72,8 @@ See `references/council-method.md` for full detail. Summary:
 
 Don't generate generic trendy app ideas. Use available context about the user's goals/skills, research real unmet needs or gaps, generate a short list of plausible opportunities, and run a lighter version of the council over the most promising 1-3 before recommending which deserve real validation.
 
+When writing the final report (§7), map the shortlist onto the report's `Verdict:` line the same way §6 maps mid-project mode: `Decision:` names the top-ranked direction, and `Verdict:` expresses confidence in pursuing *that one* further: APPROVE = confidently pursue further validation on the top-ranked direction, MODIFY = a direction is promising but needs reframing before validating it, WAIT = none of the generated directions are validated enough yet to prioritize one, REJECT = this pass found nothing worth pursuing. The other 1-2 shortlisted directions go in "Alternatives Considered," not into the Verdict line.
+
 ## 6. Mid-project mode
 
 When something is already partly built: inspect what actually exists (don't assume), compare current evidence against original assumptions, and pick one of **CONTINUE / MODIFY / PIVOT / PAUSE / STOP**. Explicitly guard against sunk-cost reasoning — money or time already spent is not evidence the plan is sound.
@@ -75,6 +83,8 @@ When writing the final report (§7), map this onto the report's `Verdict:` line 
 ## 7. Final verdict
 
 Always resolve to exactly one of: **APPROVE / MODIFY / WAIT / REJECT**. Never hide behind "it depends" when a useful provisional call is possible. The verdict follows from evidence and argument quality, not a vote count.
+
+**The verdict describes only the proposal as currently presented — never combine two states into one line** (e.g. never write "REJECT as framed, MODIFY if changed"). If a revised or alternative version would fare better, that goes in "Alternatives Considered," a "Required Modification" note, or the ONE NEXT MOVE — not folded into `Verdict:` itself. Pick the one value that matches what to do with the proposal *as given today*.
 
 **When the decision is a choice among several named options** (e.g. "Auth0 vs. Clerk vs. Supabase Auth vs. build it ourselves"), put the recommended option in the `Decision:` line and let `Verdict:` express confidence in that pick: APPROVE = confidently recommend the named option, MODIFY = a hybrid or a variant not among the given options is better, WAIT = don't commit to any option yet, get specific missing evidence first, REJECT = none of the given options solve the underlying problem.
 
