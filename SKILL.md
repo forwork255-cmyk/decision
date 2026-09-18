@@ -3,7 +3,7 @@ name: decision-council
 description: Structured decision analysis for builders deciding whether an idea, feature, architecture, pivot, or in-progress project is worth pursuing. Use when a meaningful decision exists with real uncertainty and multiple paths — new app/product ideas, "should I build X or Y", "should I continue or pivot this project", feature or architecture calls, or "I don't know what to build". Do not use for routine coding, formatting, small bug fixes, or simple factual questions.
 license: MIT
 metadata:
-  version: "1.0"
+  version: "1.0.3"
   category: decision-analysis
 ---
 
