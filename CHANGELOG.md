@@ -44,3 +44,7 @@ Final hardening/release audit against the current Agent Skills spec. This audit 
 ## 1.0.2 — 2026-09-18 — install instructions clarified (no Council behavior changed)
 
 `README.md` only. The Install section now states the repository-name vs skill-name difference up front, gives explicit destination paths, links the release ZIP directly (`releases/latest/download/decision-council.zip`), and gives copy-paste clone commands that produce a correctly named folder. `SKILL.md` and `references/` are unchanged.
+
+## 1.0.3 — 2026-09-18 — one-click install fixed at the source (no Council behavior changed)
+
+The repository was previously named `universal-decision-council` (default branch `master`); old URLs redirect. GitHub's Code → Download ZIP produced `universal-decision-council-master/`, and Claude Code registers a skill under its folder name, so the raw ZIP installed a skill called `universal-decision-council-master`. Fixed by renaming the repository to `decision` and the default branch to `council`: GitHub names the ZIP folder `<repository>-<branch>`, so Download ZIP now yields exactly `decision-council/`. Added `.gitattributes` (`export-ignore`) so that ZIP holds only the 9 installable skill files, rewrote the README install section, and documented the naming constraint in `CONTRIBUTING.md`. `SKILL.md` and `references/` are unchanged.

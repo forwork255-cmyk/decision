@@ -1,0 +1,4 @@
+# Keep GitHub's Code -> Download ZIP limited to the installable skill files.
+.gitattributes export-ignore
+.gitignore export-ignore
+ROADMAP.md export-ignore

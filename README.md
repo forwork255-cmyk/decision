@@ -19,34 +19,28 @@ It adapts effort to the decision (LIGHT / STANDARD / DEEP / MAX) and degrades gr
 
 ## Install
 
-Two names are involved, and they are not the same: the **repository** is called `universal-decision-council`, but the **skill** is called `decision-council`. Your agent needs a folder named exactly `decision-council` (it must match the `name:` line in `SKILL.md`). The three ways below differ only in how much renaming you have to do.
+The skill is one folder named **`decision-council`**. Any of these three ways gives you exactly that folder:
 
-**Where the folder goes:** inside your agent's skills directory, so the final path ends in `.../skills/decision-council/SKILL.md`. For Claude Code that is `~/.claude/skills/decision-council/` (all your projects) or `.claude/skills/decision-council/` (one project). For other Agent Skills tools, check that tool's documentation for its skills directory; the skill itself has no Claude-specific parts.
+**1. Easiest: GitHub's green Code button → Download ZIP.** Extract it. You get one folder, already named `decision-council`, containing `SKILL.md`. Move that folder into your agent's skills directory (below). No renaming.
 
-### 1. Recommended: the release ZIP (no renaming)
+**2. The release ZIP.** Same result and same contents, from the [Releases page](https://github.com/forwork255-cmyk/decision/releases) ([direct download](https://github.com/forwork255-cmyk/decision/releases/latest/download/decision-council.zip)).
 
-1. Download [decision-council.zip](https://github.com/forwork255-cmyk/universal-decision-council/releases/latest/download/decision-council.zip) (all releases: [Releases page](https://github.com/forwork255-cmyk/universal-decision-council/releases)).
-2. Unzip it. You get one folder, already named `decision-council/`.
-3. Move that folder into your skills directory (see above).
-
-### 2. Cloning the repository
-
-Clone straight into a correctly named folder, then remove the git data:
+**3. `git clone`.** Give the clone the skill's name, then drop the git data:
 
 ```bash
-git clone https://github.com/forwork255-cmyk/universal-decision-council.git decision-council
+git clone https://github.com/forwork255-cmyk/decision.git decision-council
 rm -rf decision-council/.git
 ```
 
-(PowerShell: `Remove-Item -Recurse -Force decision-council\.git`.) Then move `decision-council/` into your skills directory. If you cloned without the trailing `decision-council` name, rename the folder yourself first.
+(PowerShell: `Remove-Item -Recurse -Force decision-council\.git`.) The trailing `decision-council` matters: without it git names the folder `decision`.
 
-### 3. GitHub's "Code → Download ZIP" button (needs a rename)
+**Where the folder goes:** inside your agent's skills directory, so the path ends in `.../skills/decision-council/SKILL.md`. For Claude Code that is `~/.claude/skills/decision-council/` (all projects) or `.claude/skills/decision-council/` (one project). For other Agent Skills tools, check that tool's documentation; the skill has no Claude-specific parts.
 
-This unpacks into `universal-decision-council-master/`. GitHub always names that folder after the repository and branch, never the skill, so it will not match. Rename the extracted folder to `decision-council` before moving it into your skills directory. It also contains a few repo-only files (such as `ROADMAP.md`); they are harmless.
+**One common trap (mainly Windows "Extract All"):** the tool may wrap the ZIP in an extra outer folder, giving `decision-council\decision-council\SKILL.md`. Move the inner folder, the one that directly contains `SKILL.md`. If you move the outer one, the skill will not be found.
 
-### Why the name matters
+**Check it worked:** start a new session in your agent; the skill should be listed as `decision-council`.
 
-The [Agent Skills spec](https://agentskills.io/specification) requires the `name:` field in `SKILL.md` (`decision-council`) to match its containing folder. A folder called `universal-decision-council` or `universal-decision-council-master` does not match, and some tools will refuse to load the skill. Option 1 avoids this entirely.
+**Why the repository is called `decision` and its default branch `council`:** GitHub names the Download-ZIP folder `<repository>-<branch>`, so this pair produces exactly `decision-council`. Please read [CONTRIBUTING.md](CONTRIBUTING.md) before renaming either. Tools such as Claude Code name a skill after its folder, and the [Agent Skills spec](https://agentskills.io/specification) requires the folder to match the `name:` in `SKILL.md`, which is why the folder name matters.
 
 ## Files
 

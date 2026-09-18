@@ -4,10 +4,10 @@ Source of truth for what phase this project is on. Durable status; check this fi
 
 ## Current state: released, live-validated, distribution-ready, real GitHub Release published
 
-- **Repo:** https://github.com/forwork255-cmyk/universal-decision-council
+- **Repo:** https://github.com/forwork255-cmyk/decision (default branch `council`; formerly `universal-decision-council` / `master`, old URLs redirect)
 - **Live commit on GitHub:** `8e1d832` (confirmed via `git ls-remote`, not just local cache)
 - **Installed locally at:** `~/.claude/skills/decision-council/` (plain files only, no `.git`)
-- **GitHub Release (latest):** [v1.0.2](https://github.com/forwork255-cmyk/universal-decision-council/releases/tag/v1.0.2) — `decision-council.zip` attached (SHA256 `ae1688b0…58b4`, verified against GitHub's digest via the `releases/latest/download/` link the README uses). Recommended install path. v1.0.1 remains published; it differs only in README wording.
+- **GitHub Release (latest):** [v1.0.2](https://github.com/forwork255-cmyk/decision/releases/tag/v1.0.2) — `decision-council.zip` attached (SHA256 `ae1688b0…58b4`, verified against GitHub's digest via the `releases/latest/download/` link the README uses). Recommended install path. v1.0.1 remains published; it differs only in README wording.
 - **Distribution ZIP:** rebuilt from `8e1d832` — `decision-council/` folder, 9 files (SKILL.md, README.md, CHANGELOG.md, CONTRIBUTING.md, SECURITY.md, LICENSE, references/{council-method,research-method,injection-test-fixture}.md), name verified to match folder, no artifacts, forward-slash paths confirmed (cross-platform-safe).
 
 ## What's been done (in order)
@@ -35,6 +35,8 @@ Source of truth for what phase this project is on. Durable status; check this fi
 
 12. **Install-instructions pass (v1.0.2)** — README-only: repo-name vs skill-name explained up front, explicit destination paths, direct latest-release ZIP link, copy-paste clone commands. Tested by following the README literally in clean temp dirs (ZIP route and clone route), plus a live invocation of the ZIP-extracted install. No SKILL.md/references changes.
 
+13. **One-click install fix (v1.0.3)** — experimentally established that GitHub names the Download-ZIP root `<repo>-<branch>` (renaming the repo alone cannot yield `decision-council`); renamed repo to `decision` and default branch to `council` so the ZIP root is exactly `decision-council/`; added `.gitattributes` export-ignore; archived the stale older `forwork255-cmyk/decision-council` repo with a pointer README.
+
 ## What's NOT done / open items (nothing urgent, no known defects)
 
 - Never tested on a non-Claude host (Cursor, Copilot, etc.) — the format is designed to be portable, but cross-platform execution was never actually verified, only the spec-conformance of the files.
@@ -42,6 +44,8 @@ Source of truth for what phase this project is on. Durable status; check this fi
 - No automated `skills-ref validate` run — checked spec conformance by hand each time instead.
 
 ## Key facts to remember across a compaction/new session
+
+- **Do not rename the repo (`decision`) or default branch (`council`).** The pair is what makes GitHub's Download ZIP root exactly `decision-council/`. Claude Code names a skill after its folder, and a nested skill folder is NOT discovered (tested on Claude Code 2.1.252).
 
 - User's own convention (seen in their other projects: iraq-job-agent, myga) is to keep a `ROADMAP.md` as living status — this file follows that same pattern for this project.
 - User pushes to GitHub sometimes from their own terminal (environment-isolated from this session's tools) and sometimes lets this session push directly via `git push` (which has worked reliably in this session once `gh` auth was set up once). Either way works; ask if unsure.
