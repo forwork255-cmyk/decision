@@ -84,7 +84,7 @@ When writing the final report (§7), map this onto the report's `Verdict:` line 
 
 Always resolve to exactly one of: **APPROVE / MODIFY / WAIT / REJECT**. Never hide behind "it depends" when a useful provisional call is possible. The verdict follows from evidence and argument quality, not a vote count.
 
-**The verdict describes only the proposal as currently presented — never combine two states into one line** (e.g. never write "REJECT as framed, MODIFY if changed"). If a revised or alternative version would fare better, that goes in "Alternatives Considered," a "Required Modification" note, or the ONE NEXT MOVE — not folded into `Verdict:` itself. Pick the one value that matches what to do with the proposal *as given today*.
+**The `Verdict:` line must contain exactly one of those four words and nothing else** — no qualifier, no parenthetical, no second state on the same line. Never write "REJECT (as framed)," "MODIFY — ...," "WAIT, but...," "APPROVE with...," or any combined/qualified verdict. All qualification, context, alternatives, or revised versions go in "What We Found," "Alternatives Considered," "Required Modification," "What Would Change the Verdict," or ONE NEXT MOVE — never on the `Verdict:` line itself. Pick the one value that matches what to do with the proposal *as given today*; the reasoning can — and should — live in the surrounding sections.
 
 **When the decision is a choice among several named options** (e.g. "Auth0 vs. Clerk vs. Supabase Auth vs. build it ourselves"), put the recommended option in the `Decision:` line and let `Verdict:` express confidence in that pick: APPROVE = confidently recommend the named option, MODIFY = a hybrid or a variant not among the given options is better, WAIT = don't commit to any option yet, get specific missing evidence first, REJECT = none of the given options solve the underlying problem.
 
@@ -108,6 +108,8 @@ Council Effort: LIGHT / STANDARD / DEEP / MAX
 ## Where the Council Disagrees
 ## Critical Assumptions
 ## Alternatives Considered
+## Required Modification
+[include only when the verdict is MODIFY or REJECT and a revised/alternative version would fare better — omit this section otherwise]
 ## Biggest Blind Spot
 ## Biggest Risk
 ## What Would Change the Verdict?
