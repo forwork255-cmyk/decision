@@ -19,17 +19,34 @@ It adapts effort to the decision (LIGHT / STANDARD / DEEP / MAX) and degrades gr
 
 ## Install
 
-There are three ways to get this skill. If you're not sure which to use, use the first one.
+Two names are involved, and they are not the same: the **repository** is called `universal-decision-council`, but the **skill** is called `decision-council`. Your agent needs a folder named exactly `decision-council` (it must match the `name:` line in `SKILL.md`). The three ways below differ only in how much renaming you have to do.
 
-**1. Recommended — download the release package.** Go to [Releases](https://github.com/forwork255-cmyk/universal-decision-council/releases), download `decision-council.zip` from the latest release, and unzip it. You'll get a folder already named exactly `decision-council/` — copy that whole folder into your agent platform's skills directory (e.g. `.claude/skills/`, so the final path is `.claude/skills/decision-council/`). No renaming needed.
+**Where the folder goes:** inside your agent's skills directory, so the final path ends in `.../skills/decision-council/SKILL.md`. For Claude Code that is `~/.claude/skills/decision-council/` (all your projects) or `.claude/skills/decision-council/` (one project). For other Agent Skills tools, check that tool's documentation for its skills directory; the skill itself has no Claude-specific parts.
 
-**2. Cloning this repository.** `git clone` puts the skill files directly in the folder you cloned into — but that folder is named `universal-decision-council` (this repo's name), not `decision-council`. Rename it to `decision-council` before copying it into your skills directory.
+### 1. Recommended: the release ZIP (no renaming)
 
-**3. GitHub's "Code → Download ZIP" button.** This unpacks into a folder named `universal-decision-council-master/` — GitHub always names it after the repository and branch, never the skill. Rename the extracted folder to `decision-council` before installing it.
+1. Download [decision-council.zip](https://github.com/forwork255-cmyk/universal-decision-council/releases/latest/download/decision-council.zip) (all releases: [Releases page](https://github.com/forwork255-cmyk/universal-decision-council/releases)).
+2. Unzip it. You get one folder, already named `decision-council/`.
+3. Move that folder into your skills directory (see above).
 
-Why the renaming matters for options 2 and 3: the [Agent Skills spec](https://agentskills.io/specification) requires a skill's `SKILL.md` `name:` field (here, `decision-council`) to exactly match its containing folder name. A folder named `universal-decision-council` or `universal-decision-council-master` won't match, and some hosts will refuse to load it. Option 1 sidesteps this entirely, which is why it's recommended for anyone who isn't already comfortable with this rule.
+### 2. Cloning the repository
 
-Any host that implements the [Agent Skills open standard](https://agentskills.io/) can load this skill — it has no Claude-specific dependencies.
+Clone straight into a correctly named folder, then remove the git data:
+
+```bash
+git clone https://github.com/forwork255-cmyk/universal-decision-council.git decision-council
+rm -rf decision-council/.git
+```
+
+(PowerShell: `Remove-Item -Recurse -Force decision-council\.git`.) Then move `decision-council/` into your skills directory. If you cloned without the trailing `decision-council` name, rename the folder yourself first.
+
+### 3. GitHub's "Code → Download ZIP" button (needs a rename)
+
+This unpacks into `universal-decision-council-master/`. GitHub always names that folder after the repository and branch, never the skill, so it will not match. Rename the extracted folder to `decision-council` before moving it into your skills directory. It also contains a few repo-only files (such as `ROADMAP.md`); they are harmless.
+
+### Why the name matters
+
+The [Agent Skills spec](https://agentskills.io/specification) requires the `name:` field in `SKILL.md` (`decision-council`) to match its containing folder. A folder called `universal-decision-council` or `universal-decision-council-master` does not match, and some tools will refuse to load the skill. Option 1 avoids this entirely.
 
 ## Files
 
