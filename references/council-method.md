@@ -31,6 +31,7 @@ After the five perspectives produce their views, turn on the council itself:
 - Hidden assumptions and contradictory evidence
 - Overlooked alternatives and opportunity cost
 - Technical and business risks nobody flagged
+- Conclusions stated more strongly than the evidence under them (see `references/research-method.md`), such as a source that was labeled weak earlier but later used as if it were established
 
 Ask explicitly: **"what did the entire council miss?"**
 
@@ -40,6 +41,17 @@ Do not resolve this by counting votes. A 4-1 or 5-0 split is not itself evidence
 
 - **Reasoning disagreement** (same facts, different interpretation): present both readings, explain the interpretive difference, let the verdict weigh which reading the evidence better supports.
 - **Evidence conflict** (credible sources disagree about what's factually true): try to verify the underlying claim directly rather than picking a side by preference or majority.
+
+## Before the verdict: critical evidence, unknowns, robustness
+
+An internal check. Surface it in the report only when doing so makes the answer clearer.
+
+1. **Critical Evidence:** the 1-3 pieces of evidence that actually drive the verdict.
+2. **Critical Unknowns:** the 1-3 missing facts that could realistically change it.
+3. **Weakest-evidence removal test:** identify the weakest important evidence behind the conclusion, set it aside, and ask whether the verdict still follows from what remains. If it doesn't, that evidence is not decisive; don't lean on it.
+4. **Robustness:** if the verdict would materially change without that evidence, research it further when that's practical, or lower `Confidence` and say the decision is sensitive to that uncertainty.
+
+Don't become attached to a conclusion because you found a number that seems to support it.
 
 ## Alternatives comparison
 
@@ -60,3 +72,7 @@ Example: Problem: yes. Solution: maybe. Opportunity: yes. Approach: no. → Verd
 ## Validation criteria (when proposing WAIT)
 
 If the verdict is WAIT, name concrete, cheap ways to get the missing evidence: user interviews, a landing-page or pricing test, a small technical spike, a limited pilot. Only propose measurable thresholds ("validate if X% do Y") when there's a real basis for the number — don't invent precision to sound rigorous.
+
+## Choosing the next move
+
+The ONE NEXT MOVE should normally reduce the most important unresolved uncertainty. Prefer moves that are cheap, fast, reversible, and produce real-world evidence based on behavior rather than compliments: contact potential customers, observe an existing workflow, ask what someone did recently (not what they say they would do), get a real payment commitment, apply to actual jobs, or run a small experiment. Don't default to "build an MVP"; recommend building only when the evidence says building is the next information-producing step.

@@ -52,7 +52,11 @@ If project files, code, or prior context are available and relevant (mid-project
 
 ## 3. Research reality (only what's relevant)
 
-Research is a means, not a ritual — see `references/research-method.md` for source tiers, fact/assumption/uncertain labeling, and rules against fabrication.
+Research is a means, not a ritual. At STANDARD depth or above, read `references/research-method.md` first: source tiers, fact/assumption/uncertain labeling, claim-strength rules, and rules against fabrication.
+
+Before searching, ask what single fact could change the verdict and research that first: research the uncertainty, not just the topic.
+
+**Attribute claims at the strength their sources earn.** Tag every number or statistic inline, in every section, with its source type, e.g. "6–12 months (blog estimates)", "79% (self-reported survey)", "$5–50/gig (marketplace listings)", "(primary data)". Never state a figure derived from blogs, aggregators, promotional pages, or anecdotes as plain fact, and don't call sources "independent" or a claim "well-established" unless that is true. If such a figure is central to the verdict, find stronger evidence, reduce its weight, or state that the decision doesn't depend on it; and don't let HIGH Confidence rest on it.
 
 Use whatever real capabilities the current host provides (web search, browser, filesystem, data analysis, subagents, connectors). If a capability isn't available, say so plainly and adapt — never pretend research happened that didn't.
 
@@ -60,12 +64,12 @@ Stop researching once more research is unlikely to change the conclusion. Don't 
 
 ## 4. Run the council
 
-See `references/council-method.md` for full detail. Summary:
+At STANDARD depth or above, read `references/council-method.md` before running the council. Summary:
 
 - **Five core perspectives**, each asking a genuinely different question: Contrarian (how could this fail?), First Principles (right problem?), Expansionist (what upside are we missing?), Outsider (what would a fresh eyes see?), Executor (can this actually be built and run?).
 - Add specialist perspectives (e.g. Security, Financial, Legal, Data) only when they'd materially change the answer — not by default.
 - If the host supports independent subagents, run the core perspectives in parallel and independently (no anchoring on each other). If not, reason through them sequentially but keep them analytically separate — don't just relabel one opinion five times, and don't claim independence you didn't have.
-- After the initial analysis, run an **adversarial pass** against the council's own output: weak reasoning, unsupported claims, bias, missed alternatives, opportunity cost. Ask directly: "what did the whole council miss?" Quality of argument beats vote count — a 4-1 split doesn't make the 4 right.
+- After the initial analysis, run an **adversarial pass** against the council's own output: weak reasoning, unsupported claims, bias, missed alternatives, opportunity cost. Ask directly: "what did the whole council miss?" Quality of argument beats vote count — a 4-1 split doesn't make the 4 right. Before the verdict, also run the critical-evidence, weakest-evidence-removal, and robustness checks in `references/council-method.md`.
 - Compare against real alternatives to the user's proposed approach (different scope, different target user, different business model, doing nothing) — don't only evaluate the one option as framed.
 
 ## 5. Discovery mode ("I don't know what to build")
@@ -89,6 +93,10 @@ Always resolve to exactly one of: **APPROVE / MODIFY / WAIT / REJECT**. Never hi
 **When the decision is a choice among several named options** (e.g. "Auth0 vs. Clerk vs. Supabase Auth vs. build it ourselves"), put the recommended option in the `Decision:` line and let `Verdict:` express confidence in that pick: APPROVE = confidently recommend the named option, MODIFY = a hybrid or a variant not among the given options is better, WAIT = don't commit to any option yet, get specific missing evidence first, REJECT = none of the given options solve the underlying problem.
 
 **When evidence quality is LOW**, don't force a confident APPROVE/REJECT — if cheap validation could resolve the uncertainty, that's what WAIT is for. Only issue a confident call on weak evidence when validation genuinely isn't feasible and a provisional decision is still more useful than none.
+
+**Evidence Quality is not Confidence.** Evidence Quality is how reliable and relevant the available evidence is. `Confidence` is how sure you are that the recommended action is right given that evidence, the remaining uncertainty, how reversible the action is, and this user's constraints. Strong evidence can still leave low Confidence; weak evidence can still support a cautious call when the downside is clear and the action is reversible. A MEDIUM Evidence Quality label never licenses a medium-strength factual claim.
+
+**One verdict is not one certainty.** The verdict is a single word; the reasoning need not pretend to be certain. "REJECT because the downside is clear even though the upside is uncertain," "WAIT because it hinges on one missing fact that is cheap to test," and "MODIFY because the opportunity looks plausible but this version is poorly supported" are all fine. State what is uncertain in the sections below the verdict line, and never turn a forced verdict into a forced claim of certainty.
 
 Report using this structure:
 
@@ -117,7 +125,7 @@ Council Effort: LIGHT / STANDARD / DEEP / MAX
 [links/citations for load-bearing claims, when the host surfaced any — omit this section entirely if no external research was done]
 
 # ONE NEXT MOVE
-[the single most useful next action — not a task list]
+[the single most useful next action: one action, not a list or a two-part move. Normally the cheapest, fastest, reversible action that reduces the biggest unresolved uncertainty, ideally producing real-world behavior evidence. Don't default to "build an MVP".]
 ```
 
 For LIGHT-depth calls, a shorter version of this (verdict + 3-4 key lines + one next move) is fine — don't force the full template on a small decision.

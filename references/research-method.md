@@ -8,6 +8,10 @@ More information is not better information. Before researching, ask what would a
 
 Depending on the question, relevant areas might include: existing products, direct and indirect competitors, substitute solutions, user pain points and demand signals, market conditions and pricing, technical feasibility and platform constraints, relevant data, regulation, security, distribution, business model, and recent developments. Only chase the ones that matter here.
 
+## Research the uncertainty, not the topic
+
+Before searching, ask: what fact could realistically change the verdict? Research that first, and skip generic statistics that don't bear on it. If the critical uncertainty is about this user's own behavior or a specific person's willingness to act (will customers pay, will I stick with this), articles can't settle it; a small real-world test can, and the next move should say so.
+
 ## Source quality tiers
 
 1. **Primary/authoritative** — official docs, government/regulatory data, original datasets, academic research, company filings and official statements. Prefer these for load-bearing claims.
@@ -44,6 +48,27 @@ Tag claims as you use them:
 
 Also flag outdated information, weak sources, contradictions, missing evidence, and which assumptions are actually critical to the verdict (i.e. if wrong, the verdict flips).
 
+## Claim strength must not exceed evidence strength
+
+A conclusion can be no stronger than the evidence under it. Don't silently promote one rung of this ladder into the next:
+
+1. "Source X reports Y": a named source said it; nothing more is established.
+2. "Evidence suggests Y": relevant evidence points that way, but it may be indirect or partial.
+3. "Multiple sources indicate Y": several independent sources agree (not one source repeated).
+4. "Y is directly verified": checked against a primary source or direct data.
+5. "Y is established": verified and not seriously contested.
+
+By evidence type:
+- **Primary and directly relevant** (official docs, filings, original data): can support a strong factual claim.
+- **Secondary but credible:** attribute it and qualify it ("according to X...").
+- **Anecdotal, promotional, blog-derived, or indirect:** directional only. It can shape a hypothesis or a next step, not a settled fact.
+- **Conflicting or insufficient:** don't resolve it by assumption. Say it is unresolved, and which way it leans and why, if it leans at all.
+
+If a quantitative claim is central to the verdict but its evidence is weak, do one of three things: find stronger evidence, reduce how much the verdict leans on it, or state explicitly that the decision does not depend on it. A weak number must not become a premise of a strong conclusion, and a MEDIUM Evidence Quality label is not permission to state a fact at medium strength.
+
+Bad: "12–18 months to $1K MRR is reported by blogs and is not audited" ... later ... "SaaS fails the user's timeline (12–18 months typical)."
+Good: "Blog-reported timelines of 12–18 months to $1K MRR are unaudited, so they are directional only. The verdict doesn't rest on them: with no validated demand yet and a 3–4 month deadline, a new product is a less compatible fit for that deadline."
+
 ## Don't collapse distinct facts into each other
 
 - A real problem does not automatically mean a viable business.
@@ -58,6 +83,15 @@ Also flag outdated information, weak sources, contradictions, missing evidence, 
 Don't use strong comparative claims — "market leader," "most popular," "largest," "fastest-growing," "dominant," "industry leader," "#1" — unless the claim is directly supported by evidence that actually measures that (market share data, install/user counts, revenue figures). Appearing frequently in search results, rankings, review roundups, or community discussion is evidence of *existence and visibility*, not of leadership or market size — don't infer the latter from the former.
 
 When comparative evidence isn't available, use neutral language instead: "established competitor," "notable competitor," "one of the competitors identified," "widely available alternative." Keep these four distinct and don't blur them into each other: existence of competitors, evidence of demand, evidence of market size, evidence of market leadership.
+
+## Comparisons are not predictions
+
+Compare options against the user's stated constraints; don't predict the future.
+
+- Bad: "Freelancing will get you income faster." Better: "Given the 3–4 month deadline, selling an existing skill doesn't require waiting on product-market validation the way a new SaaS product does, so it is more compatible with that constraint."
+- "Can be built cheaply" is not "will be commercially viable." "Demand exists in the market" is not "this user will get customers." "Needs less upfront development" is not "will produce income quickly."
+
+Don't call an option "best" just because it looks less risky or fits one constraint. Prefer "more compatible with the stated constraint," "better supported by the current evidence," "a credible option worth testing," or "has fewer unresolved assumptions." Save stronger comparatives (B2B beats B2C, freelancing beats SaaS, niche X beats niche Y, A is the best choice) for when the evidence actually measures that comparison.
 
 ## Numbers
 
