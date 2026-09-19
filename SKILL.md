@@ -119,7 +119,7 @@ Council Effort: LIGHT / STANDARD / DEEP / MAX
 ## Strongest Evidence For
 ## Strongest Evidence Against
 ## Where the Council Agrees
-[Council perspective synthesis: the five perspectives are sequential unless the skill explicitly ran them as separate independent subagents. Never write that perspectives "independently" or "separately" reached the same conclusion. Write "multiple perspectives converge on…" or "the perspectives agree on…" instead.]
+[Council perspective synthesis: write "the perspectives converge on…" or "Contrarian, X and Y agree on…". Never use "independent", "independently" or "separately" about the perspectives in any form ("all independently land on", "independently arrive at", "independently flagged"), unless this run actually launched separate subagents for them; if it did, say so once here.]
 ## Where the Council Disagrees
 ## Critical Assumptions
 ## Alternatives Considered
