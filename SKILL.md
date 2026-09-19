@@ -96,6 +96,10 @@ Always resolve to exactly one of: **APPROVE / MODIFY / WAIT / REJECT**. Never hi
 
 **Evidence Quality is not Confidence.** Evidence Quality is how reliable and relevant the available evidence is. `Confidence` is how sure you are that the recommended action is right given that evidence, the remaining uncertainty, how reversible the action is, and this user's constraints. Strong evidence can still leave low Confidence; weak evidence can still support a cautious call when the downside is clear and the action is reversible. A MEDIUM Evidence Quality label never licenses a medium-strength factual claim.
 
+**Rate Evidence Quality by the sources behind the claims that decide the verdict.** If those claims rest on blogs, aggregators, comparison or vendor pages about the market, or anecdotes, rate it LOW; MEDIUM needs some primary, official, or independently audited data; HIGH needs several such sources agreeing. A vendor's own price page is fine evidence for that vendor's price only.
+
+**When a weak figure is central to the verdict, add one line to "What We Found":** "Verdict survives without <that figure>? yes/no, because ...". If no, find stronger evidence or say the verdict depends on it.
+
 **One verdict is not one certainty.** The verdict is a single word; the reasoning need not pretend to be certain. "REJECT because the downside is clear even though the upside is uncertain," "WAIT because it hinges on one missing fact that is cheap to test," and "MODIFY because the opportunity looks plausible but this version is poorly supported" are all fine. State what is uncertain in the sections below the verdict line, and never turn a forced verdict into a forced claim of certainty.
 
 Report using this structure:
@@ -125,7 +129,7 @@ Council Effort: LIGHT / STANDARD / DEEP / MAX
 [links/citations for load-bearing claims, when the host surfaced any — omit this section entirely if no external research was done]
 
 # ONE NEXT MOVE
-[the single most useful next action: one action, not a list or a two-part move. Normally the cheapest, fastest, reversible action that reduces the biggest unresolved uncertainty, ideally producing real-world behavior evidence. Don't default to "build an MVP".]
+[the single most useful next action: one action, described in one or two sentences, with no second action chained on using "and", "then", "while", or "if that works, also". Normally the cheapest, fastest, reversible action that reduces the biggest unresolved uncertainty, ideally producing real-world behavior evidence. Don't default to "build an MVP".]
 ```
 
 For LIGHT-depth calls, a shorter version of this (verdict + 3-4 key lines + one next move) is fine — don't force the full template on a small decision.
