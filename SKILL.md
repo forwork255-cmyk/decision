@@ -132,7 +132,7 @@ Council Effort: LIGHT / STANDARD / DEEP / MAX
 [links/citations for load-bearing claims, when the host surfaced any — omit this section entirely if no external research was done]
 
 # ONE NEXT MOVE
-[exactly one action the user can take next that involves someone or something outside their own notes and head (ask a specific kind of person one question, run one trial, check one live source). One sentence, one verb: no alternative ("or", "versus"), no branch ("if… otherwise…"), no follow-up step. Choose the one that reduces the biggest unresolved uncertainty with real-world evidence. Don't default to "build an MVP".]
+[exactly one action the user can take next that involves someone or something outside their own notes and head (ask a specific kind of person one question, run one trial, check one live source). One sentence, one verb: no alternative ("or", "versus"), no branch ("if… otherwise…"), no follow-up step, and no attached second activity ("… and measure", "… while logging", "… and track"). When the decision still has an unresolved uncertainty and a cheaper validation step is available, do not make building or shipping the product itself the next move; choose the cheaper validation action that reduces the key uncertainty. Choose the one that reduces the biggest unresolved uncertainty with real-world evidence. Don't default to "build an MVP".]
 ```
 
 For LIGHT-depth calls, a shorter version of this (verdict + 3-4 key lines + one next move) is fine — don't force the full template on a small decision.
