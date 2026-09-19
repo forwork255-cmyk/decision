@@ -102,6 +102,8 @@ Always resolve to exactly one of: **APPROVE / MODIFY / WAIT / REJECT**. Never hi
 
 **One verdict is not one certainty.** The verdict is a single word; the reasoning need not pretend to be certain. "REJECT because the downside is clear even though the upside is uncertain," "WAIT because it hinges on one missing fact that is cheap to test," and "MODIFY because the opportunity looks plausible but this version is poorly supported" are all fine. State what is uncertain in the sections below the verdict line, and never turn a forced verdict into a forced claim of certainty.
 
+**Say only what you know about where a statement comes from.** Write "you said" or "you told me" only for words actually in the user's message; everything else about their situation is an assumption, worded as one ("I'm assuming…"), never as something they stated, checked, or currently use. Don't describe sources or council perspectives as "independent" or "independently" (write "several sources" or "the perspectives agreed") unless the sources are verified as independent or the perspectives ran as separate subagents.
+
 Report using this structure:
 
 ```
