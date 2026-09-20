@@ -98,7 +98,7 @@ Always resolve to exactly one of: **APPROVE / MODIFY / WAIT / REJECT**. Never hi
 
 **Rate Evidence Quality by the sources behind the claims that decide the verdict.** If those claims rest on blogs, aggregators, comparison or vendor pages about the market, or anecdotes, rate it LOW; MEDIUM needs some primary, official, or independently audited data; HIGH needs several such sources agreeing. A vendor's own price page is fine evidence for that vendor's price only.
 
-**When a weak figure is central to the verdict, add one line to "What We Found":** "Verdict survives without <that figure>? yes/no, because ...". If no, find stronger evidence or say the verdict depends on it.
+**When a blog, aggregator, vendor or anecdotal figure is used to decide, size or trigger the recommendation or next move (not only the verdict), add one line to "What We Found":** "Verdict and next move survive without <that figure>? yes/no, because ...". Test the figure the recommendation actually uses, not a claim you already set aside. Never turn such a figure into a target, threshold or red flag unless you label it a rule of thumb for the user to check.
 
 **One verdict is not one certainty.** The verdict is a single word; the reasoning need not pretend to be certain. "REJECT because the downside is clear even though the upside is uncertain," "WAIT because it hinges on one missing fact that is cheap to test," and "MODIFY because the opportunity looks plausible but this version is poorly supported" are all fine. State what is uncertain in the sections below the verdict line, and never turn a forced verdict into a forced claim of certainty.
 
