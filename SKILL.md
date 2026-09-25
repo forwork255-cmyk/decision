@@ -32,7 +32,7 @@ Default to the smallest depth that can responsibly answer the question.
 
 **At LIGHT depth**, when using only 2-3 of the five core perspectives (see §4), explicitly name which ones were dropped and why — e.g. "Outsider and Expansionist skipped: no one else affected and no better option at stake here." Don't silently drop perspectives.
 
-`Council Effort` (how much investigation and reasoning was actually done) and `Evidence Quality` (how strong the evidence behind the verdict is, §7) must not be conflated: a LIGHT call can have HIGH Evidence Quality, and a DEEP one LOW.
+`Council Effort` (how much work was done) and `Evidence Quality` (how strong the evidence is, §7) are separate: a LIGHT call can have HIGH Evidence Quality, and a DEEP one LOW.
 
 ## 2. Understand the decision
 
@@ -44,7 +44,7 @@ Before researching anything, pin down:
 - what assumptions are being made
 - what evidence would actually change the answer
 
-Make reasonable assumptions rather than interrogating the user with unnecessary questions. Label important assumptions explicitly instead of asking about everything.
+Make reasonable assumptions and label the important ones, rather than asking about everything.
 
 If project files, code, or prior context are available and relevant (mid-project decisions), inspect them before concluding anything about current state, architecture, or technical debt. Never claim to have inspected something you didn't.
 
@@ -56,15 +56,15 @@ Take the decision's context from the user's messages, files they point you to, a
 
 ## 3. Research reality (only what's relevant)
 
-Research is a means, not a ritual. At STANDARD depth or above, read `references/research-method.md` first: source tiers, fact/assumption/uncertain labeling, claim-strength rules, and rules against fabrication.
+Research is a means, not a ritual. At STANDARD depth or above, read `references/research-method.md` first.
 
-Before searching, ask what single fact could change the verdict and research that first: research the uncertainty, not just the topic.
+Before searching, ask what single fact could change the verdict and research that first.
 
-**Attribute claims at the strength their sources earn.** Tag every number or statistic inline, in every section, with its source type, e.g. "6–12 months (blog estimates)", "79% (self-reported survey)", "$5–50/gig (marketplace listings)", "(primary data)". Never state a figure derived from blogs, aggregators, promotional pages, or anecdotes as plain fact, and don't call a claim "well-established" unless that is true. If such a figure is central to the verdict, find stronger evidence, reduce its weight, or state that the decision doesn't depend on it; and don't let HIGH Confidence rest on it.
+**Attribute claims at the strength their sources earn.** Tag every number or statistic inline, in every section, with its source type, e.g. "6–12 months (blog estimates)", "79% (self-reported survey)", "(primary data)". Never state a figure derived from blogs, aggregators, promotional pages, or anecdotes as plain fact, and don't call a claim "well-established" unless that is true. If such a figure is central to the verdict, find stronger evidence, reduce its weight, or state that the decision doesn't depend on it; and don't let HIGH Confidence rest on it.
 
 Use whatever real capabilities the current host provides (web search, browser, filesystem, data analysis, subagents, connectors). If a capability isn't available, say so once, plainly, and adapt — never pretend research happened that didn't.
 
-Stop researching once more research is unlikely to change the conclusion. Don't pad the report with tangential findings.
+Stop researching once more is unlikely to change the conclusion; don't pad the report with tangential findings.
 
 ## 4. Run the council
 
@@ -92,19 +92,19 @@ When writing the final report (§7), map this onto the report's `Verdict:` line 
 
 Always resolve to exactly one of: **APPROVE / MODIFY / WAIT / REJECT**. Never hide behind "it depends" when a useful provisional call is possible.
 
-**Before writing `Decision:` and `Verdict:`, check the premises the recommendation rests on** (only those that could change the action): redo the arithmetic and comparisons, check that the facts agree, and check that no claim, causal explanation, assumption or caveat grew stronger or vanished between the analysis and the conclusion. If the recommendation rests on a premise the analysis weakened, or a contradiction remains, change it or state that uncertainty in it. This check is internal and adds no section.
+**Before writing `Decision:` and `Verdict:`, check the premises the recommendation rests on** (only those that could change the action): redo the arithmetic, recompute both sides of every comparison, check that the facts agree, and check that no claim, causal explanation, assumption or caveat grew stronger or vanished between the analysis and the conclusion. If the recommendation rests on a premise the analysis weakened, or a contradiction remains, change it or state that uncertainty in it. Name any premise a comparison needs that the user did not state (e.g. "at the same price") as an assumption. Record the check as one line in "What We Found": "Verdict and next move survive without <the weakest estimate, assumption or figure they use>? yes/no, because ...".
 
-**The `Verdict:` line must contain exactly one of those four words and nothing else** — no qualifier, no parenthetical, no second state on the same line. Never write "REJECT (as framed)," "MODIFY — ...," "WAIT, but...," "APPROVE with...," or any combined/qualified verdict. All qualification, context, alternatives, or revised versions go in the sections below it — never on the `Verdict:` line itself. Pick the one value that matches what to do with the proposal *as given today*, state what is uncertain below it, and never turn a forced one-word verdict into a claim of certainty.
+**The `Verdict:` line must contain exactly one of those four words and nothing else** — no qualifier, no parenthetical, no second state on the same line. Never write "REJECT (as framed)," "MODIFY — ...," "WAIT, but...," "APPROVE with...," or any combined/qualified verdict. All qualification, context, alternatives, or revised versions go in the sections below it. Pick the one value that matches what to do with the proposal *as given today*, state what is uncertain below it, and never turn a forced one-word verdict into a claim of certainty.
 
 **When the decision is a choice among several named options**, put the recommended option in the `Decision:` line and let `Verdict:` express confidence in that pick: APPROVE = confidently recommend the named option, MODIFY = a hybrid or a variant not among the given options is better, WAIT = don't commit to any option yet, get specific missing evidence first, REJECT = none of the given options solve the underlying problem.
 
-**WAIT only when waiting is worth it.** Before choosing WAIT, or making information-gathering the next move, ask whether a plausible answer could materially change what the user should do. If not, decide now. If it could, WAIT only when learning it is worth the delay, effort and displaced opportunity, given how reversible acting now is, what being wrong would cost, and whether the check is cheaper and safer than the commitment it informs. LOW Evidence Quality never forces WAIT by itself: APPROVE can be right when the action is itself a cheap, reversible test, holds across plausible outcomes, or waiting adds little. Hard-to-reverse commitments (building, signing, a large spend) need stronger support; when a cheaper step could change them, it comes first. When you decide now, the ONE NEXT MOVE carries out the action or its first step, and its key question is the one whose answer would make the user reverse course.
+**WAIT only when waiting is worth it.** Before choosing WAIT, or making information-gathering the next move, ask whether a plausible answer could materially change what the user should do. If not, decide now. If it could, WAIT only when learning it is worth the delay, effort and displaced opportunity, given how reversible acting now is, what being wrong would cost, and whether the check is cheaper and safer than the commitment it informs. LOW Evidence Quality never forces WAIT by itself: APPROVE can be right when the action is itself a cheap, reversible test, holds across plausible outcomes, or waiting adds little. Hard-to-reverse commitments (building, signing, a large spend) need stronger support; when a cheaper step could change them, it comes first. A check that takes minutes, fits before the action and could change it is not WAIT: make it the Decision's condition ("X, after confirming Y"); never dismiss it unchecked. Decision, Verdict and ONE NEXT MOVE must agree: if the next move is a check whose answer could reverse the Decision, the Decision states that condition; otherwise the next move carries out the action or its first step. When you decide now, the key question is the risk most likely to make the user reverse course (normally the Biggest Risk), never a preference the user has already settled.
 
 **Evidence Quality is not Confidence.** `Confidence` is how sure you are that the recommended action is right given the evidence, the remaining uncertainty, how reversible the action is, and this user's constraints. Strong evidence can still leave low Confidence, and weak evidence limits it. A MEDIUM Evidence Quality label never licenses a medium-strength factual claim.
 
 **Rate Evidence Quality by the claims that decide the verdict, weighing each by what it is.** A preference the user states is evidence of that preference. A fact they state about their own situation is a usable input, not a verified fact: when the verdict follows directly from such facts (a constraint check, arithmetic on their numbers), rate by how completely they settle it and say it rests on their stated facts. An estimate, belief, prediction or forecast is not strong evidence because the user supplied it; a calculation is only as strong as its inputs and method; a correlation does not establish a cause; a verdict that depends on something nobody has measured yet (demand, others' behavior, whether a fix works) is LOW. For external claims: blogs, aggregators, comparison or vendor pages about the market, or anecdotes are LOW; MEDIUM needs some primary, official, or independently audited data; HIGH needs sources that settle the claim: one directly authoritative source for a narrow factual question, several such sources agreeing for a broader one. A vendor's own price page is fine evidence for that vendor's price only.
 
-**When a blog, aggregator, vendor or anecdotal figure is used to decide, size or trigger the recommendation or next move (not only the verdict), add one line to "What We Found":** "Verdict and next move survive without <that figure>? yes/no, because ...". Test the figure the recommendation actually uses, not a claim you already set aside. Never turn such a figure into a target, threshold or red flag unless you label it a rule of thumb for the user to check.
+**The survival line tests what the recommendation actually uses, not a claim you already set aside; when a blog, aggregator, vendor or anecdotal figure decides, sizes or triggers the recommendation or next move, test that figure.** Never turn such a figure into a target, threshold or red flag unless you label it a rule of thumb for the user to check.
 
 **Say only what you know about where a statement comes from.** Write "you said" or "you told me" only for words actually in the user's message; everything else about their situation is an assumption, worded as one ("I'm assuming…"), never as something they stated, checked, or currently use. Don't describe sources or council perspectives as "independent" or "independently" (write "several sources" or "the perspectives agreed") unless the sources are verified as independent or the perspectives ran as separate subagents.
 
@@ -119,7 +119,7 @@ Report using this structure:
 ```
 # 🏛️ COUNCIL VERDICT
 
-Decision: [the recommended action, as one sentence the user can act on — never the question restated]
+Decision: [the recommended action, as one sentence the user can act on, with its condition if a check could reverse it — never the question restated]
 Verdict: APPROVE / MODIFY / WAIT / REJECT
 Confidence: LOW / MEDIUM / HIGH
 Evidence Quality: LOW / MEDIUM / HIGH
@@ -130,15 +130,15 @@ Council Effort: LIGHT / STANDARD / DEEP / MAX
 ## Strongest Evidence For
 ## Strongest Evidence Against
 ## Where the Council Agrees
-[At most three decision-relevant points, not a repeat of What We Found, each in this form: "- <the point> (raised by: <perspective names>)". Do not describe how the perspectives arrived at it. If this run launched separate subagents, say so once here, in one line at the top of this section.]
+[At most three decision-relevant points, not a repeat of What We Found, each in this form: "- <the point> (raised by: <perspective names>)". Do not describe how the perspectives arrived at it. Say once, in one line at the top of this section, whether the perspectives ran as separate subagents or were reasoned in sequence by one model.]
 ## Where the Council Disagrees
-[The strongest objection to the recommendation: which perspective raised it, what settles it (a fact, a calculation or the next move), and whether it changes the recommendation.]
+[The strongest objection to the recommendation: which perspective raised it, what settles it (a fact, a calculation or the next move), and whether it changes the recommendation. Add at most one more objection, in the same form, only if it raises a materially different consideration.]
 ## Critical Assumptions
 ## Alternatives Considered
 ## Required Modification
 [include only when the verdict is MODIFY or REJECT and a revised/alternative version would fare better — omit this section otherwise]
 ## Biggest Risk
-[The one risk or blind spot most likely to make this decision wrong; don't repeat Strongest Evidence Against.]
+[The one risk most likely to make this decision wrong; don't repeat Strongest Evidence Against. Then one line on what the whole council missed (a consideration no perspective raised), if the adversarial pass found one.]
 ## What Would Change the Verdict?
 [First bullet: the key question, as a question that names no way of answering it, with its type. Further bullets: other conditions, one line each.]
 ## Sources
@@ -155,9 +155,9 @@ Council Effort: LIGHT / STANDARD / DEEP / MAX
 - Done when: [the observable count, event or bounded time window after which the result exists]
 ```
 
-**At LIGHT depth, keep it short:** the header block with the one-line note on dropped perspectives (§1), the key reasons (3-4 lines), the strongest caveat or objection (one line), and the ONE NEXT MOVE; leave out the other sections and add no analysis just to fill the format. The one next move still carries all seven fields at LIGHT depth: compress them into short labeled fragments, never drop, merge or imply a field; the key question is written in its own field.
+**At LIGHT depth, keep it short:** the header block with the one-line note on dropped perspectives (§1), the key reasons (3-4 lines, each naming the perspective that raised it; every perspective used appears), the survival line, the strongest caveat or objection (one line), and the ONE NEXT MOVE; leave out the other sections and add no analysis just to fill the format. The one next move still carries all seven fields at LIGHT depth: compress them into short labeled fragments, never drop, merge or imply a field; the key question is written in its own field.
 
-Make the reasoning visible, not just the conclusion: what was researched, which evidence mattered, where it was weak, where the council disagreed and why — each point once, where it matters most. Don't expose private chain-of-thought; the sections above *are* the transparency.
+State each point once, where it matters most. The sections above *are* the transparency; don't expose private chain-of-thought.
 
 Close verdicts that rest on external research (sources you actually consulted) with this, and leave it off otherwise:
 
