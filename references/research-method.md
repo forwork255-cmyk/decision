@@ -41,7 +41,7 @@ Never invent sources, statistics, market sizes, quotations, competitor facts, or
 
 Tag claims as you use them:
 
-- **Fact** — supported by evidence you can point to.
+- **Fact** — supported by evidence you can point to. Something the user states about their own situation is their input: attribute it to them rather than presenting it as independently verified.
 - **Assumption** — reasonable, but not established; label it as such.
 - **Uncertain claim** — some evidence exists but it's incomplete or ambiguous.
 - **Unverified claim** — needs more investigation before it should carry weight.

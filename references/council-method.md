@@ -8,11 +8,11 @@ Use all five for STANDARD/DEEP/MAX. For LIGHT depth, 2-3 of the most relevant ar
 
 1. **Contrarian** — "How could this fail?" Look for fatal assumptions, weak or unproven demand, competitive risk, bad incentives, likely failure modes.
 2. **First Principles** — "Are we solving the right problem?" Strip away the proposed solution and examine the underlying problem and mechanism directly. Sometimes the right answer is a different problem entirely.
-3. **Expansionist** — "What upside are we missing?" Adjacent markets, a stronger version of the same idea, alternative use cases, alternative business models, second-order opportunities.
-4. **Outsider** — "What would someone without our assumptions see?" Normal-user perception, obvious flaws insiders stop noticing, confusing value propositions.
+3. **Expansionist** — "What bigger upside or better option isn't being considered?" A stronger version of the same idea, an option missing from the user's list, adjacent markets or use cases, alternative business models, second-order opportunities.
+4. **Outsider** — "What does this look like to the people it affects?" The assumptions, incentives and consequences for customers, users, partners or anyone else who lives with the outcome; obvious flaws insiders stop noticing.
 5. **Executor** — "Can this actually be built, launched, and maintained?" Engineering complexity, time, cost, operational burden, dependencies, realistic constraints for *this* user's resources.
 
-Keep these genuinely distinct. Don't force artificial disagreement, but don't let four of them collapse into restating the same point either.
+Keep these genuinely distinct. A perspective earns space in the report only when it adds a distinct assumption, consequence, alternative, objection, risk or decision-changing consideration; compress or omit what only repeats another. Don't force artificial disagreement, and don't make every perspective speak to fill space.
 
 ## Adding specialists
 
@@ -75,4 +75,4 @@ If the verdict is WAIT, name concrete, cheap ways to get the missing evidence: u
 
 ## Choosing the next move
 
-The ONE NEXT MOVE should normally reduce the most important unresolved uncertainty. Prefer moves that are cheap, fast, reversible, and produce real-world evidence based on behavior rather than compliments: contact potential customers, observe an existing workflow, ask what someone did recently (not what they say they would do), get a real payment commitment, apply to actual jobs, or run a small experiment. Don't default to "build an MVP"; recommend building only when the evidence says building is the next information-producing step.
+The ONE NEXT MOVE should normally reduce the most important unresolved uncertainty that could change the action; when the decision already holds across plausible answers, it is the action itself or its first step (see `SKILL.md` §7). Prefer moves that are cheap, fast, reversible, and produce real-world evidence based on behavior rather than compliments: contact potential customers, observe an existing workflow, ask what someone did recently (not what they say they would do), get a real payment commitment, apply to actual jobs, or run a small experiment. Don't default to "build an MVP"; recommend building only when the evidence says building is the next information-producing step.
