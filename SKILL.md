@@ -19,7 +19,7 @@ Run it when the user is facing a real decision: a new idea, a build-vs-alternati
 
 ## 1. Pick a depth
 
-Match effort to the decision's importance. State the depth on the `Council Effort` line; give the reason in a few words only when it isn't obvious.
+Match effort to the decision's importance. State the depth on the `Council Effort` line, with a reason only when it isn't obvious.
 
 | Depth | When | Roughly |
 |---|---|---|
@@ -28,11 +28,11 @@ Match effort to the decision's importance. State the depth on the `Council Effor
 | DEEP | Significant time/money at stake, real uncertainty | Broader research; full council; explicit alternatives comparison |
 | MAX | User asks for it, or stakes are unusually large | Everything in DEEP plus wider source coverage and more rigorous conflict-checking |
 
-Default to the smallest depth that can responsibly answer the question. Don't run MAX-depth analysis on a light decision.
+Default to the smallest depth that can responsibly answer the question.
 
 **At LIGHT depth**, when using only 2-3 of the five core perspectives (see §4), explicitly name which ones were dropped and why — e.g. "Outsider and Expansionist skipped: no one else affected and no better option at stake here." Don't silently drop perspectives.
 
-`Council Effort` (how much investigation and reasoning was actually done: LIGHT/STANDARD/DEEP/MAX) and `Evidence Quality` (how strong the evidence behind the verdict is: LOW/MEDIUM/HIGH, see §7) measure different things and must not be conflated: a LIGHT call can have HIGH Evidence Quality, and a DEEP one can land on LOW.
+`Council Effort` (how much investigation and reasoning was actually done) and `Evidence Quality` (how strong the evidence behind the verdict is, §7) must not be conflated: a LIGHT call can have HIGH Evidence Quality, and a DEEP one LOW.
 
 ## 2. Understand the decision
 
@@ -60,7 +60,7 @@ Research is a means, not a ritual. At STANDARD depth or above, read `references/
 
 Before searching, ask what single fact could change the verdict and research that first: research the uncertainty, not just the topic.
 
-**Attribute claims at the strength their sources earn.** Tag every number or statistic inline, in every section, with its source type, e.g. "6–12 months (blog estimates)", "79% (self-reported survey)", "$5–50/gig (marketplace listings)", "(primary data)". Never state a figure derived from blogs, aggregators, promotional pages, or anecdotes as plain fact, and don't call sources "independent" or a claim "well-established" unless that is true. If such a figure is central to the verdict, find stronger evidence, reduce its weight, or state that the decision doesn't depend on it; and don't let HIGH Confidence rest on it.
+**Attribute claims at the strength their sources earn.** Tag every number or statistic inline, in every section, with its source type, e.g. "6–12 months (blog estimates)", "79% (self-reported survey)", "$5–50/gig (marketplace listings)", "(primary data)". Never state a figure derived from blogs, aggregators, promotional pages, or anecdotes as plain fact, and don't call a claim "well-established" unless that is true. If such a figure is central to the verdict, find stronger evidence, reduce its weight, or state that the decision doesn't depend on it; and don't let HIGH Confidence rest on it.
 
 Use whatever real capabilities the current host provides (web search, browser, filesystem, data analysis, subagents, connectors). If a capability isn't available, say so once, plainly, and adapt — never pretend research happened that didn't.
 
@@ -90,23 +90,21 @@ When writing the final report (§7), map this onto the report's `Verdict:` line 
 
 ## 7. Final verdict
 
-Always resolve to exactly one of: **APPROVE / MODIFY / WAIT / REJECT**. Never hide behind "it depends" when a useful provisional call is possible. The verdict follows from evidence and argument quality, not a vote count.
+Always resolve to exactly one of: **APPROVE / MODIFY / WAIT / REJECT**. Never hide behind "it depends" when a useful provisional call is possible.
 
 **Before writing `Decision:` and `Verdict:`, check the premises the recommendation rests on** (only those that could change the action): redo the arithmetic and comparisons, check that the facts agree, and check that no claim, causal explanation, assumption or caveat grew stronger or vanished between the analysis and the conclusion. If the recommendation rests on a premise the analysis weakened, or a contradiction remains, change it or state that uncertainty in it. This check is internal and adds no section.
 
-**The `Verdict:` line must contain exactly one of those four words and nothing else** — no qualifier, no parenthetical, no second state on the same line. Never write "REJECT (as framed)," "MODIFY — ...," "WAIT, but...," "APPROVE with...," or any combined/qualified verdict. All qualification, context, alternatives, or revised versions go in "What We Found," "Alternatives Considered," "Required Modification," "What Would Change the Verdict," or ONE NEXT MOVE — never on the `Verdict:` line itself. Pick the one value that matches what to do with the proposal *as given today*; the reasoning can — and should — live in the surrounding sections.
+**The `Verdict:` line must contain exactly one of those four words and nothing else** — no qualifier, no parenthetical, no second state on the same line. Never write "REJECT (as framed)," "MODIFY — ...," "WAIT, but...," "APPROVE with...," or any combined/qualified verdict. All qualification, context, alternatives, or revised versions go in the sections below it — never on the `Verdict:` line itself. Pick the one value that matches what to do with the proposal *as given today*, state what is uncertain below it, and never turn a forced one-word verdict into a claim of certainty.
 
-**When the decision is a choice among several named options** (e.g. "Auth0 vs. Clerk vs. Supabase Auth vs. build it ourselves"), put the recommended option in the `Decision:` line and let `Verdict:` express confidence in that pick: APPROVE = confidently recommend the named option, MODIFY = a hybrid or a variant not among the given options is better, WAIT = don't commit to any option yet, get specific missing evidence first, REJECT = none of the given options solve the underlying problem.
+**When the decision is a choice among several named options**, put the recommended option in the `Decision:` line and let `Verdict:` express confidence in that pick: APPROVE = confidently recommend the named option, MODIFY = a hybrid or a variant not among the given options is better, WAIT = don't commit to any option yet, get specific missing evidence first, REJECT = none of the given options solve the underlying problem.
 
 **WAIT only when waiting is worth it.** Before choosing WAIT, or making information-gathering the next move, ask whether a plausible answer could materially change what the user should do. If not, decide now. If it could, WAIT only when learning it is worth the delay, effort and displaced opportunity, given how reversible acting now is, what being wrong would cost, and whether the check is cheaper and safer than the commitment it informs. LOW Evidence Quality never forces WAIT by itself: APPROVE can be right when the action is itself a cheap, reversible test, holds across plausible outcomes, or waiting adds little. Hard-to-reverse commitments (building, signing, a large spend) need stronger support; when a cheaper step could change them, it comes first. When you decide now, the ONE NEXT MOVE carries out the action or its first step, and its key question is the one whose answer would make the user reverse course.
 
-**Evidence Quality is not Confidence.** Evidence Quality is how reliable and relevant the available evidence is. `Confidence` is how sure you are that the recommended action is right given that evidence, the remaining uncertainty, how reversible the action is, and this user's constraints. Strong evidence can still leave low Confidence; weak evidence limits Confidence but does not by itself force WAIT. A MEDIUM Evidence Quality label never licenses a medium-strength factual claim.
+**Evidence Quality is not Confidence.** `Confidence` is how sure you are that the recommended action is right given the evidence, the remaining uncertainty, how reversible the action is, and this user's constraints. Strong evidence can still leave low Confidence, and weak evidence limits it. A MEDIUM Evidence Quality label never licenses a medium-strength factual claim.
 
 **Rate Evidence Quality by the claims that decide the verdict, weighing each by what it is.** A preference the user states is evidence of that preference. A fact they state about their own situation is a usable input, not a verified fact: when the verdict follows directly from such facts (a constraint check, arithmetic on their numbers), rate by how completely they settle it and say it rests on their stated facts. An estimate, belief, prediction or forecast is not strong evidence because the user supplied it; a calculation is only as strong as its inputs and method; a correlation does not establish a cause; a verdict that depends on something nobody has measured yet (demand, others' behavior, whether a fix works) is LOW. For external claims: blogs, aggregators, comparison or vendor pages about the market, or anecdotes are LOW; MEDIUM needs some primary, official, or independently audited data; HIGH needs sources that settle the claim: one directly authoritative source for a narrow factual question, several such sources agreeing for a broader one. A vendor's own price page is fine evidence for that vendor's price only.
 
 **When a blog, aggregator, vendor or anecdotal figure is used to decide, size or trigger the recommendation or next move (not only the verdict), add one line to "What We Found":** "Verdict and next move survive without <that figure>? yes/no, because ...". Test the figure the recommendation actually uses, not a claim you already set aside. Never turn such a figure into a target, threshold or red flag unless you label it a rule of thumb for the user to check.
-
-**One verdict is not one certainty.** The verdict is a single word; the reasoning need not pretend to be certain. "REJECT because the downside is clear even though the upside is uncertain," "WAIT because it hinges on one missing fact that is cheap to test," and "MODIFY because the opportunity looks plausible but this version is poorly supported" are all fine. State what is uncertain in the sections below the verdict line, and never turn a forced verdict into a forced claim of certainty.
 
 **Say only what you know about where a statement comes from.** Write "you said" or "you told me" only for words actually in the user's message; everything else about their situation is an assumption, worded as one ("I'm assuming…"), never as something they stated, checked, or currently use. Don't describe sources or council perspectives as "independent" or "independently" (write "several sources" or "the perspectives agreed") unless the sources are verified as independent or the perspectives ran as separate subagents.
 
@@ -159,12 +157,8 @@ Council Effort: LIGHT / STANDARD / DEEP / MAX
 
 **At LIGHT depth, keep it short:** the header block with the one-line note on dropped perspectives (§1), the key reasons (3-4 lines), the strongest caveat or objection (one line), and the ONE NEXT MOVE; leave out the other sections and add no analysis just to fill the format. The one next move still carries all seven fields at LIGHT depth: compress them into short labeled fragments, never drop, merge or imply a field; the key question is written in its own field.
 
-Make the reasoning visible, not just the conclusion: what was researched, which evidence actually mattered, where it was weak, where the council disagreed and why. Say each point once, in the section where it matters most. Don't expose private chain-of-thought — the sections above *are* the transparency, not a dump of intermediate reasoning.
+Make the reasoning visible, not just the conclusion: what was researched, which evidence mattered, where it was weak, where the council disagreed and why — each point once, where it matters most. Don't expose private chain-of-thought; the sections above *are* the transparency.
 
 Close verdicts that rest on external research (sources you actually consulted) with this, and leave it off otherwise:
 
 > AI-assisted decision support: this analysis is not a guarantee of outcomes. Conclusions may be incomplete or wrong due to model limitations, incomplete information, weak or conflicting sources, or changes in the real world. Verify critical decisions independently.
-
-## Portability notes
-
-This skill's methodology does not depend on any specific model, host, search provider, or subagent API. Host-specific capabilities (subagents, web search, file access) are used opportunistically when available and the workflow degrades gracefully — sequential reasoning instead of parallel subagents, stated research limitations instead of fabricated findings — never silently, and never by pretending an unavailable capability was used.
