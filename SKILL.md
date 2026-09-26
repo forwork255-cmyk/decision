@@ -30,7 +30,7 @@ Match effort to the decision's importance. State the depth on the `Council Effor
 
 Default to the smallest depth that can responsibly answer the question.
 
-**At LIGHT depth**, when using only 2-3 of the five core perspectives (see §4), explicitly name which ones were dropped and why, in a few words on the `Council Effort` line — e.g. "LIGHT (Outsider, Expansionist skipped: no one else affected, no better option at stake)". Don't silently drop perspectives.
+**At LIGHT depth**, when using only 2-3 of the five core perspectives (see §4), explicitly name which ones were dropped and why, in a few words on the `Council Effort` line — e.g. "LIGHT (Outsider, Expansionist skipped: no one else affected, no better option at stake)". Don't silently drop perspectives. LIGHT uses the separate LIGHT template in §7 and none of the full report's sections; if a LIGHT council reaches materially different conclusions, use STANDARD instead.
 
 `Council Effort` (how much work was done) and `Evidence Quality` (how strong the evidence is, §7) are separate: a LIGHT call can have HIGH Evidence Quality, and a DEEP one LOW.
 
@@ -73,7 +73,7 @@ At STANDARD depth or above, read `references/council-method.md` before running t
 - **Five core perspectives**, each asking a genuinely different question: Contrarian (how could this fail?), First Principles (right problem?), Expansionist (what bigger upside or better option isn't being considered?), Outsider (what assumptions, incentives and consequences does this carry for the people it affects?), Executor (can this actually be built and run?). A perspective earns space in the report only by adding a distinct assumption, consequence, alternative, objection, risk or decision-changing consideration; omit what only repeats another.
 - Add specialist perspectives (e.g. Security, Financial, Legal, Data) only when they'd materially change the answer — not by default.
 - If the host supports independent subagents, run the core perspectives in parallel and independently (no anchoring on each other). If not, reason through them sequentially but keep them analytically separate — don't just relabel one opinion five times, and don't claim independence you didn't have.
-- At STANDARD depth or above, when perspectives reach materially different conclusions, run one **cross-examination** pass before the adversarial pass (`references/council-method.md`). Skip it when there is no material disagreement; never manufacture disagreement.
+- At STANDARD depth or above, when perspectives reach materially different conclusions, run one **cross-examination** pass before the adversarial pass (`references/council-method.md`) and show its outcome as one `Cross-examination:` line in the report. Skip it, and write no such line, when there is no material disagreement; never manufacture disagreement.
 - After the initial analysis, run an **adversarial pass** against the council's own output: weak reasoning, unsupported claims, bias, missed alternatives, opportunity cost. Ask directly: "what did the whole council miss?" Quality of argument beats vote count — a 4-1 split doesn't make the 4 right. Before the verdict, also run the critical-evidence, decisive-premise, and robustness checks in `references/council-method.md`.
 - Compare against real alternatives to the user's proposed approach (different scope, different target user, different business model, doing nothing) — don't only evaluate the one option as framed.
 
@@ -93,7 +93,7 @@ When writing the final report (§7), map this onto the report's `Verdict:` line 
 
 Always resolve to exactly one of: **APPROVE / MODIFY / WAIT / REJECT**. Never hide behind "it depends" when a useful provisional call is possible.
 
-**Before writing `Decision:` and `Verdict:`, check the premises the recommendation rests on** (only those that could change the action): redo the arithmetic, recompute both sides of every comparison, check that the facts agree, and check that no claim, causal explanation, assumption or caveat grew stronger or vanished between the analysis and the conclusion. If it rests on a premise the analysis weakened, or a contradiction remains, change it or state the uncertainty. Name any premise a comparison needs that the user did not state (e.g. "at the same price") as an assumption. A premise the user called uncertain stays uncertain in the Decision; if the pick rests on it, say what the pick does if it fails. Anything another person would have to do beyond what they offered is an assumption. Test the premise that most directly separates the pick from the strongest viable alternative (what you would recommend if the pick were ruled out, possibly doing nothing), whatever its type (fact, estimate, calculation, comparison, uncertainty the user named, external claim, assumption about another party), not the figure easiest to recompute. Record the check as one line in "What We Found": "Verdict and next move survive without <the premise that separates the pick from the strongest alternative>, against <that alternative>? yes/no, because ...".
+**Before writing `Decision:` and `Verdict:`, check the premises the recommendation rests on** (only those that could change the action): redo the arithmetic, recompute both sides of every comparison, check that the facts agree, and check that no claim, causal explanation, assumption or caveat grew stronger or vanished between the analysis and the conclusion. If it rests on a premise the analysis weakened, or a contradiction remains, change it or state the uncertainty. Name any premise a comparison needs that the user did not state (e.g. "at the same price") as an assumption. A premise the user called uncertain stays uncertain in the Decision; if the pick rests on it, say what the pick does if it fails. Anything another person would have to do beyond what they offered is an assumption. Test the premise that most directly separates the pick from the strongest viable alternative (what you would recommend if the pick were ruled out, possibly doing nothing), whatever its type (fact, estimate, calculation, comparison, uncertainty the user named, external claim, assumption about another party), not the figure easiest to recompute. Record the check as one line in "What We Found" (at LIGHT, the Survival line): "Verdict and next move survive without <the premise that separates the pick from the strongest alternative>, against <that alternative>? yes/no, because ...".
 
 **The `Verdict:` line must contain exactly one of those four words and nothing else** — no qualifier, no parenthetical, no second state on the same line. Never write "REJECT (as framed)," "MODIFY — ...," "WAIT, but...," "APPROVE with...," or any combined/qualified verdict. All qualification, context, alternatives, or revised versions go in the sections below it. Pick the one value that matches what to do with the proposal *as given today*, state what is uncertain below it, and never turn a forced one-word verdict into a claim of certainty.
 
@@ -117,7 +117,27 @@ When the decision still has an unresolved uncertainty and a cheaper validation s
 
 **Action-now path.** When no open question could change what the user should do now (the pick holds across plausible answers), the ONE NEXT MOVE is the action or its first step, in the action-now form of the template. Don't invent a key question, investigation or exercise to fill the seven fields. When acting is itself the cheapest way to answer a real open question (a technical spike, a cheap reversible trial), that is an information-gathering move, not this path. This never excuses skipping a check that fits before the action and could reverse it: that check becomes the Decision's condition and the move uses the seven fields.
 
-Report using this structure:
+**LIGHT depth uses only this template, with none of the sections of the full report below (about 300 words or fewer; a one-line note flagging embedded instructions in pasted content may precede `Decision:`):**
+
+```
+# 🏛️ COUNCIL VERDICT
+
+Decision: [as in the full template]
+Verdict: APPROVE / MODIFY / WAIT / REJECT
+Confidence: LOW / MEDIUM / HIGH
+Evidence Quality: LOW / MEDIUM / HIGH
+Council Effort: LIGHT (skipped perspectives and why, in a few words)
+
+**Why:** [two or three bullets, each naming the perspective that raised it]
+**Survival:** [the survival line, as in the full template]
+**Uncertain:** [the strongest caveat, objection or open uncertainty, one line]
+
+# ONE NEXT MOVE
+[At most three plain sentences, no field labels: (a) the question that would change the call, or on the action-now path why nothing open changes it now, and (b) what each answer means; (c) the one action or exercise and its one target; (d) the observable point at which it is done.]
+Revisit if: [only under the rule stated after the full template]
+```
+
+**STANDARD, DEEP and MAX use this full structure (LIGHT uses none of its sections):**
 
 ```
 # 🏛️ COUNCIL VERDICT
@@ -135,7 +155,7 @@ Council Effort: LIGHT / STANDARD / DEEP / MAX
 ## Where the Council Agrees
 [At most three decision-relevant points, not a repeat of What We Found, each in this form: "- <the point> (raised by: <perspective names>)". Do not describe how the perspectives arrived at it. Say once, in one line at the top of this section, whether the perspectives ran as separate subagents or were reasoned in sequence by one model.]
 ## Where the Council Disagrees
-[The strongest objection to the recommendation: which perspective raised it, what settles it (a fact, a calculation or the next move), and whether it changes the recommendation. If a cross-examination pass ran, say which perspective revised its position, if any; keep a minority position only while it is still material. Add at most one more objection, in the same form, only if it raises a materially different consideration.]
+[The strongest objection to the recommendation: which perspective raised it, what settles it (a fact, a calculation or the next move), and whether it changes the recommendation. If a cross-examination pass ran, begin with one line: "Cross-examination: <contested perspective> answered <the strongest opposing objection, in a few words>; <kept | revised> its position because <reason>."; keep a minority position only while it is still material. Add at most one more objection, in the same form, only if it raises a materially different consideration.]
 ## Critical Assumptions
 ## Alternatives Considered
 ## Required Modification
@@ -148,7 +168,7 @@ Council Effort: LIGHT / STANDARD / DEEP / MAX
 [links/citations for load-bearing claims, when the host surfaced any. If no external research was done, leave this heading out entirely; don't write "None".]
 
 # ONE NEXT MOVE
-[When the move gathers information, fill all seven fields at STANDARD depth and above, in this order, each short and in plain words; the first three come from the report's analysis and are settled before the Exercise. LIGHT depth and the action-now path use the shorter forms below.]
+[When the move gathers information, fill all seven fields at STANDARD depth and above, in this order, each short and in plain words; the first three come from the report's analysis and are settled before the Exercise. The action-now path uses the shorter form below; LIGHT uses its own template above.]
 - Key question: [the first bullet of "What Would Change the Verdict", word for word, with its type (descriptive / causal / response / preference / feasibility / access)]
 - Result: [the one observable that answers the key question and how each answer changes the verdict; no method words; name what stays open if it answers only part]
 - Not in scope: [other verdict-changing conditions left out of this move, each with its leverage or dependency reason, or "none"; not alternative actions or branches]
@@ -162,10 +182,10 @@ Council Effort: LIGHT / STANDARD / DEEP / MAX
 - Why now: [in one clause, why no open question could change it now]
 - Done when: [the observable event that shows the step is done]
 
-Revisit if: [optional, any depth: one observable future condition (event, count, price or date) that could materially reverse the decision, only when watching for it is useful; numbers follow the Result rule; otherwise omit]
+Revisit if: [optional, under the rule below; otherwise omit the line]
 ```
 
-**At LIGHT depth, keep it short:** the header block (dropped perspectives noted on `Council Effort`, §1); two or three key reasons, each naming the perspective that raised it (every perspective used appears); the survival line; the strongest caveat, objection or remaining uncertainty in one line; and the ONE NEXT MOVE as at most three plain sentences, without the seven labels: the question that would change the call and what each answer means (action-now path: why nothing open changes it now); the one action or exercise and its target; and when it is done. `Revisit if:` only under its rule. Nothing else; add no analysis to fill the format.
+**`Revisit if:` is optional at every depth.** Include one only when a specific observable future change (an event, count, price or date) could materially reverse the decision, watching for it is useful, and it is not already the next move's done-when or its own stop or return signal. Omit it for small, easily reversed choices whose next move already carries a reversal signal, and whenever it would only restate the caveat or the survival line. At most one; a number follows the Result rule.
 
 State each point once, where it matters most. The sections above *are* the transparency; don't expose private chain-of-thought.
 

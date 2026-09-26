@@ -34,7 +34,7 @@ If some do, run one compact pass:
 - One pass only: no further rounds, no voting, no new perspectives.
 - **Subagents available:** give each contested perspective the opposing outputs in a fresh call. **Unavailable:** reason through the exchange sequentially and say so; never describe it as independent.
 
-Carry the outcome into the adversarial review and into "Where the Council Disagrees": the objection that mattered, who revised, and any minority position that is still material.
+Carry the outcome into the adversarial review and into "Where the Council Disagrees", where it appears as one visible line: `Cross-examination: <contested perspective> answered <the strongest opposing objection, in a few words>; <kept | revised> its position because <reason>.` Also record any minority position that is still material. If there was no material disagreement, write no such line and don't invent an exchange.
 
 ## Adversarial review
 
