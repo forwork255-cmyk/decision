@@ -115,7 +115,7 @@ Only then choose the exercise: one coherent exercise that produces that result, 
 
 When the decision still has an unresolved uncertainty and a cheaper validation step is available, do not make building or shipping the product itself the next move; choose the cheaper validation action that reduces the key uncertainty. A step counts as cheaper only if it can produce the result. Building or shipping is the move when it is itself the cheapest way to produce the result (for example, a technical spike); a throwaway probe whose only deliverable is the answer is not "the product itself", and a lighter version that stays in use is. Don't default to "build an MVP". Put a number in the result only if the user gave it, or evidence supports it and you label it a rule of thumb with its source type; sizes such as "five conversations" or "two weeks" are parameters of the exercise, not cutoffs.
 
-**Action-now path.** When no open question could change what the user should do now (the pick holds across plausible answers), the ONE NEXT MOVE is the action or its first step, in the action-now form of the template. Don't invent a key question, investigation or exercise to fill the seven fields. When acting is itself the cheapest way to answer a real open question (a technical spike, a cheap reversible trial), that is an information-gathering move, not this path. This never excuses skipping a check that fits before the action and could reverse it: that check becomes the Decision's condition and the move uses the seven fields.
+**Action-now path.** When no open question could change what the user should do now (the pick holds across every plausible answer), the ONE NEXT MOVE is the action or its first step: at LIGHT, the sentences of the LIGHT template; at STANDARD and above, the short form of the full template, exactly four labels in this order: Action, Strongest open question, Holds because, Done when. `Strongest open question` repeats the first bullet of "What Would Change the Verdict" word for word, and `Holds because` says why each plausible answer leaves the action unchanged. If any plausible answer to it could change the action, this is not the action-now path. Don't invent a key question, investigation or exercise to fill the seven fields. When acting is itself the cheapest way to answer a real open question (a technical spike, a cheap reversible trial), that is an information-gathering move, not this path. This never excuses skipping a check that fits before the action and could reverse it: that check becomes the Decision's condition and the move uses the seven fields.
 
 **LIGHT depth uses only this template, with none of the sections of the full report below (about 300 words or fewer; a one-line note flagging embedded instructions in pasted content may precede `Decision:`):**
 
@@ -134,7 +134,6 @@ Council Effort: LIGHT (skipped perspectives and why, in a few words)
 
 # ONE NEXT MOVE
 [At most three plain sentences, no field labels: (a) the question that would change the call, or on the action-now path why nothing open changes it now, and (b) what each answer means; (c) the one action or exercise and its one target; (d) the observable point at which it is done.]
-Revisit if: [only under the rule stated after the full template]
 ```
 
 **STANDARD, DEEP and MAX use this full structure (LIGHT uses none of its sections):**
@@ -163,7 +162,7 @@ Council Effort: LIGHT / STANDARD / DEEP / MAX
 ## Biggest Risk
 [The one risk most likely to make this decision wrong; don't repeat Strongest Evidence Against. Then one line on what the whole council missed (a consideration no perspective raised), if the adversarial pass found one.]
 ## What Would Change the Verdict?
-[First bullet: the key question, as a question that names no way of answering it, with its type (on the action-now path: the risk most likely to reverse the decision later). Further bullets: other conditions, one line each.]
+[First bullet: the key question, as a question that names no way of answering it, with its type (on the action-now path: the strongest open question, the one most likely to reverse the decision later, still written as a question). Further bullets: other conditions, one line each.]
 ## Sources
 [links/citations for load-bearing claims, when the host surfaced any. If no external research was done, leave this heading out entirely; don't write "None".]
 
@@ -177,15 +176,14 @@ Council Effort: LIGHT / STANDARD / DEEP / MAX
 - Target: [the one named system, vendor or dataset, or the one population defined by a single criterion; when several were plausible, the fact that made this the choice]
 - Done when: [the observable count, event or bounded time window after which the result exists]
 
-[Action-now path (§7) instead of the seven fields:]
+[Action-now path (§7), only when the pick holds across every plausible answer, instead of the seven fields:]
 - Action: [the action itself or its first step, with its one target]
-- Why now: [in one clause, why no open question could change it now]
+- Strongest open question: [the first bullet of "What Would Change the Verdict", word for word]
+- Holds because: [in one clause, why each plausible answer leaves the action unchanged]
 - Done when: [the observable event that shows the step is done]
-
-Revisit if: [optional, under the rule below; otherwise omit the line]
 ```
 
-**`Revisit if:` is optional at every depth.** Include one only when a specific observable future change (an event, count, price or date) could materially reverse the decision, watching for it is useful, and it is not already the next move's done-when or its own stop or return signal. Omit it for small, easily reversed choices whose next move already carries a reversal signal, and whenever it would only restate the caveat or the survival line. At most one; a number follows the Result rule.
+**`Revisit if:` is omitted by default.** Add at most one line, at any depth, only for a distinct observable trigger (an event, count, price or date) that could reverse the choice and is not in the next move's done-when or its stop or return condition; it never restates the caveat or the survival line. A number follows the Result rule.
 
 State each point once, where it matters most. The sections above *are* the transparency; don't expose private chain-of-thought.
 
