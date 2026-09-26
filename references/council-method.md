@@ -23,9 +23,22 @@ Only add a specialist perspective (Data Analyst, Market Researcher, Competitive 
 - **Subagents available:** launch the core perspectives independently and in parallel, without letting later ones see earlier answers — this avoids anchoring. State your own tentative read of the decision *before* dispatching them, and don't let it leak into their prompts.
 - **Subagents unavailable:** perform each perspective as a distinct, sequential reasoning pass. Keep them analytically separate (each should reach its own conclusion from its own angle) but never claim they ran as independent agents — say plainly that they were reasoned through sequentially.
 
+## Cross-examination (STANDARD+, only on material disagreement)
+
+After the initial perspectives, check whether any reach materially different conclusions: ones that would lead to a different verdict, pick or next move. Differences of emphasis don't count. If none do, skip this pass; don't invent disagreement to run it.
+
+If some do, run one compact pass:
+
+- Each contested perspective names the strongest objection from a perspective that disagrees with it (the one that would most change its conclusion if true) and answers it.
+- It then keeps or revises its position in one line, saying what changed its mind if it revised.
+- One pass only: no further rounds, no voting, no new perspectives.
+- **Subagents available:** give each contested perspective the opposing outputs in a fresh call. **Unavailable:** reason through the exchange sequentially and say so; never describe it as independent.
+
+Carry the outcome into the adversarial review and into "Where the Council Disagrees": the objection that mattered, who revised, and any minority position that is still material.
+
 ## Adversarial review
 
-After the five perspectives produce their views, turn on the council itself:
+After the five perspectives produce their views (and any cross-examination), turn on the council itself:
 
 - Weak reasoning, unsupported claims, confirmation/survivorship/selection bias, circular reasoning
 - Hidden assumptions and contradictory evidence
@@ -48,7 +61,7 @@ An internal check. Surface it in the report only when doing so makes the answer 
 
 1. **Critical Evidence:** the 1-3 pieces of evidence that actually drive the verdict.
 2. **Critical Unknowns:** the 1-3 missing facts that could realistically change it.
-3. **Weakest-evidence removal test:** identify the weakest important evidence behind the conclusion, set it aside, and ask whether the verdict still follows from what remains. If it doesn't, that evidence is not decisive; don't lean on it.
+3. **Decisive-premise test:** name the strongest viable alternative to the pick and the premise that most directly separates the two (`SKILL.md` §7), not the easiest figure to recompute. Set that premise aside and ask whether the pick still beats the alternative. If it doesn't, the verdict depends on that premise: go to step 4. If the weakest important evidence is a different premise, test it the same way.
 4. **Robustness:** if the verdict would materially change without that evidence, research it further when that's practical, or lower `Confidence` and say the decision is sensitive to that uncertainty.
 
 Don't become attached to a conclusion because you found a number that seems to support it.
@@ -75,4 +88,4 @@ If the verdict is WAIT, name concrete, cheap ways to get the missing evidence: u
 
 ## Choosing the next move
 
-The ONE NEXT MOVE should normally reduce the most important unresolved uncertainty that could change the action; when the decision already holds across plausible answers, it is the action itself or its first step (see `SKILL.md` §7). Prefer moves that are cheap, fast, reversible, and produce real-world evidence based on behavior rather than compliments: contact potential customers, observe an existing workflow, ask what someone did recently (not what they say they would do), get a real payment commitment, apply to actual jobs, or run a small experiment. Don't default to "build an MVP"; recommend building only when the evidence says building is the next information-producing step.
+The ONE NEXT MOVE should normally reduce the most important unresolved uncertainty that could change the action; when the decision already holds across plausible answers, it is the action itself or its first step (the action-now path in `SKILL.md` §7). Prefer moves that are cheap, fast, reversible, and produce real-world evidence based on behavior rather than compliments: contact potential customers, observe an existing workflow, ask what someone did recently (not what they say they would do), get a real payment commitment, apply to actual jobs, or run a small experiment. Don't default to "build an MVP"; recommend building only when the evidence says building is the next information-producing step.
