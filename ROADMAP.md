@@ -5,7 +5,7 @@ Source of truth for what phase this project is on. Durable status; check this fi
 ## Current state: released, live-validated, distribution-ready, real GitHub Release published
 
 - **Repo:** https://github.com/forwork255-cmyk/decision (default branch `council`; formerly `universal-decision-council` / `master`, old URLs redirect)
-- **Release commit:** `eb52b0c` (v1.0.3); later commits on `council` are docs-only
+- **Release commit:** `eb52b0c` (v1.0.3); later commits up to v1.0.3 are docs-only, and the current tip also carries the Council behavior changes listed under "Unreleased" in `CHANGELOG.md`
 - **Installed locally at:** `~/.claude/skills/decision-council/` (plain files only, no `.git`)
 - **GitHub Release (latest):** [v1.0.3](https://github.com/forwork255-cmyk/decision/releases/tag/v1.0.3) — `decision-council.zip` attached (SHA256 `ce23a939…eaabf`, matches GitHub's digest). v1.0.1 and v1.0.2 remain published, untouched. Code → Download ZIP and the release ZIP now have identical contents (9 files, root `decision-council/`).
 - **Distribution ZIP:** built from `eb52b0c` — `decision-council/` folder, 9 files (SKILL.md, README.md, CHANGELOG.md, CONTRIBUTING.md, SECURITY.md, LICENSE, references/{council-method,research-method,injection-test-fixture}.md), name verified to match folder, no artifacts, forward-slash paths confirmed (cross-platform-safe).
