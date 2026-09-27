@@ -23,18 +23,20 @@ Only add a specialist perspective (Data Analyst, Market Researcher, Competitive 
 - **Subagents available:** launch the core perspectives independently and in parallel, without letting later ones see earlier answers — this avoids anchoring. State your own tentative read of the decision *before* dispatching them, and don't let it leak into their prompts.
 - **Subagents unavailable:** perform each perspective as a distinct, sequential reasoning pass. Keep them analytically separate (each should reach its own conclusion from its own angle) but never claim they ran as independent agents — say plainly that they were reasoned through sequentially.
 
-## Cross-examination (STANDARD+, only on material disagreement)
+## Cross-examination (STANDARD+, on material disagreement or a material competing consideration)
 
-After the initial perspectives, check whether any reach materially different conclusions: ones that would lead to a different verdict, pick or next move. Differences of emphasis don't count. If none do, skip this pass; don't invent disagreement to run it.
+After the initial perspectives, check two things, independently: whether any reach materially different conclusions (ones that would lead to a different verdict, pick or next move — differences of emphasis don't count), and whether the decision has a material competing consideration. Run the pass if either holds; skip it only when neither does, and never invent disagreement or a competing consideration to run it.
 
-If some do, run one compact pass:
+If there is material disagreement, run one compact pass:
 
 - Each contested perspective names the strongest objection from a perspective that disagrees with it (the one that would most change its conclusion if true) and answers it.
 - It then keeps or revises its position in one line, saying what changed its mind if it revised.
 - One pass only: no further rounds, no voting, no new perspectives.
 - **Subagents available:** give each contested perspective the opposing outputs in a fresh call. **Unavailable:** reason through the exchange sequentially and say so; never describe it as independent.
 
-Carry the outcome into the adversarial review and into "Where the Council Disagrees", where it appears as one visible line: `Cross-examination: <contested perspective> answered <the strongest opposing objection, in a few words>; <kept | revised> its position because <reason>.` Also record any minority position that is still material. If there was no material disagreement, write no such line and don't invent an exchange.
+If there is a material competing consideration but no material disagreement, run one compact pass instead: the perspective best placed to weigh it tests the strongest form of that consideration against the recommendation and states plainly whether the recommendation holds up — without inventing an opposing perspective or a disagreement that didn't occur.
+
+Carry the outcome into the adversarial review and into "Where the Council Disagrees", where it appears as one visible line. On material disagreement: `Cross-examination: <contested perspective> answered <the strongest opposing objection, in a few words>; <kept | revised> its position because <reason>.` On a competing consideration tested without disagreement: `Cross-examination: tested <the strongest form of the competing consideration>; recommendation unchanged because <reason>.` Also record any minority position that is still material. If there was neither material disagreement nor a material competing consideration, write no such line and don't invent one.
 
 ## Adversarial review
 
