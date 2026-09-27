@@ -10,6 +10,38 @@ Source of truth for what phase this project is on. Durable status; check this fi
 - **GitHub Release (latest):** [v1.0.3](https://github.com/forwork255-cmyk/decision/releases/tag/v1.0.3) — `decision-council.zip` attached (SHA256 `ce23a939…eaabf`, matches GitHub's digest). v1.0.1 and v1.0.2 remain published, untouched. Code → Download ZIP and the release ZIP now have identical contents (9 files, root `decision-council/`).
 - **Distribution ZIP:** built from `eb52b0c` — `decision-council/` folder, 9 files (SKILL.md, README.md, CHANGELOG.md, CONTRIBUTING.md, SECURITY.md, LICENSE, references/{council-method,research-method,injection-test-fixture}.md), name verified to match folder, no artifacts, forward-slash paths confirmed (cross-platform-safe).
 
+## Enhancement track: v9 candidate status (2026-09-27) — unpromoted, not live
+
+**Production (`council`, commit `dc6684126b8883311a9bcd85a5cf0e914cb4ba83`) remains the working version.** The
+`enhance-v9-successor2` branch (candidate commit `c9f8d12fc4756a3775da690bbcd38273cc59f8d1`) is a separate,
+unmerged, unpromoted candidate under a private training/validation harness (`training/final-validation/` in
+the separate Windows project tree, not part of this repo).
+
+- **Registered v9 phase-1 screen (22 isolated enhanced calls, `claude-sonnet-5`, medium effort): terminal
+  `FAIL / TARGETED FIX NEEDED`, `proceed=false`.** All 22 calls completed (status OK, no retries, no model
+  substitution); raw prompts/responses/metadata/stderr were frozen and hashed before any parsing or
+  evaluation.
+- Passed: R1 (3 of 3, no report produced on the non-slash-invoked scene); R2 (3 of 3, the embedded injection
+  was not obeyed); G2 (median LIGHT-holdout length 391 words, limit 400); G4 (Revisit-if frequency 0 of 16,
+  limit 50%).
+- Failed: **G3a'** (2 short-form echo-rule violations); **G7** (LIGHT depth chosen on 5 of 8 declared-LIGHT
+  scenes, 6 required); **G6** (2 of 8 declared-COMPETING scenes reached STANDARD+ with a literal
+  Cross-examination line, 6 required — unreachable).
+- The registered early-stop rule ended the cycle at this point, as designed: **no baseline run, no absolute
+  scoring, no pairwise scoring, no sealed-key adjudication, no merge, and no promotion followed.** The sealed
+  key for this holdout stays external and unopened.
+- An earlier three-request production-vs-v9 comparison and a separate three-request exploratory pilot (both
+  outside the registered holdout, informal) showed promising qualitative differences in some cases, but
+  **these are not a reliability result and not a formal five-effect PASS** — the registered blind-reader
+  scoring for the five observable effects (E1-E5) was never reached (the screen stopped first), so it is
+  inaccurate to describe any or all of the five effects as having failed; they were simply not assessed.
+- The 22-call screen used approximately 15-16 session-meter points against a fresh 5-hour usage window. An
+  earlier in-session recommendation to wait for a window reset before starting was more conservative than
+  this screen alone actually required.
+- **No v10 candidate or further v9 validation is scheduled by this closeout.** The next step, if and when
+  taken, would be a targeted fix to the G3a'/G7/G6 failure modes followed by a fresh cycle against a new
+  holdout — not attempted here.
+
 ## What's been done (in order)
 
 1. **Research phase** — verified the current Agent Skills spec (agentskills.io), checked platform adoption claims, reviewed prior-art skills (ECC's council, idea-autopsy patterns), confirmed MIT licensing norm.
