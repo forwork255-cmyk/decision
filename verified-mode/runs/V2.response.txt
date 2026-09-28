@@ -1,0 +1,26 @@
+# 🏛️ COUNCIL VERDICT
+
+Decision: Before accepting the new $420/month rate, push back on the vendor to tie the increase to improved reliability (e.g., a credit or reduced fee for callouts they're late on) — don't sign the flat increase as-is, and don't switch vendors yet since no alternative vendor data exists.
+Verdict: MODIFY
+Confidence: MEDIUM
+Evidence Quality: HIGH (the 70% on-time figure is your own logged data, not a third-party claim)
+Council Effort: LIGHT — Outsider skipped (no material third-party impact here) and Expansionist folded into the reasoning below rather than run separately, since the "better option" question collapses into "no comparison data exists yet."
+
+**Key reasons:**
+- The actual problem is reliability, not price — a 40% base-fee hike ($300→$420) doesn't fix a 30% no-show rate on emergency callouts (First Principles).
+- Accepting as-is means paying more for an unchanged 70% on-time rate; that's a strictly worse deal unless something else improves (Contrarian).
+- Switching vendors is not obviously better — you have zero performance data on any alternative, so "look for a different vendor" is speculation, not evidence (Contrarian/Expansionist).
+- The cheap move — asking your current vendor to attach an SLA/credit clause to the fee increase — costs nothing and could resolve the tradeoff before you commit either way (Expansionist).
+
+Survival check: verdict and next move survive without stronger data — yes, because it rests only on your own callout log (70% on-time, HIGH quality) and the vendor's stated new price, both solid; no fragile third-party figure is load-bearing.
+
+**Strongest caveat:** if this vendor refuses any performance terms and 70% on-time is genuinely below what's achievable locally, that tips toward shopping alternatives — but you'd need at least one competing quote/reliability estimate to know that, which you don't have yet.
+
+# ONE NEXT MOVE
+- Key question: Will the vendor agree to tie the fee increase to an on-time performance guarantee or credit? (type: access)
+- Result: Vendor agrees to some performance term → accept the modified contract; vendor refuses any performance term → treat that as a signal to get 1-2 comparison quotes before renewing.
+- Not in scope: Whether an alternative vendor would perform better (no data exists to answer it now, and it's moot unless this vendor refuses to negotiate).
+- Exercise: Ask your current vendor directly whether they'll add a reliability clause (credit/discount for late callouts) to the new contract before you sign. Chosen over: soliciting competing vendor quotes first, because that costs more time/effort and is unnecessary if your current vendor simply agrees to better terms.
+- Evidence source: another person's answer (the vendor's response to your ask)
+- Target: your current plumbing vendor (the only party who can act on this without new information from elsewhere)
+- Done when: you get a yes/no answer from the vendor on the proposed clause

@@ -1,0 +1,1 @@
+A community garden is choosing between Compost Service A ($45/month flat, handles up to 200kg) and Service B ($30/month plus $0.10/kg for anything over an included 150kg). We expect about 180kg/month. Which service is cheaper at our expected volume, and how many kg would it take to change the answer?

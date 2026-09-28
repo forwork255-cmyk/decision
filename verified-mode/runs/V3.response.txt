@@ -1,0 +1,25 @@
+# 🏛️ COUNCIL VERDICT
+
+Decision: Choose Service B ($30/month + $0.10/kg over 150kg) — at your expected 180kg/month it costs $33 vs. Service A's flat $45.
+Verdict: APPROVE
+Confidence: HIGH
+Evidence Quality: HIGH
+Council Effort: LIGHT (Outsider and Expansionist dropped — no other stakeholders are affected differently by this choice, and no third alternative provider is on the table)
+
+## Key Reasons
+- **First Principles**: The right comparison is total monthly cost at your actual volume, not the headline price. At 180kg: A = $45 flat; B = $30 + 0.10×(180−150) = $30 + $3 = **$33**. B saves $12/month.
+- **Contrarian**: For B to become as expensive as A, volume would need to reach **300kg** (30 = 0.10×(kg−150) → kg=300). But Service A only handles up to 200kg — so within A's entire usable range, B never costs more than $35 (at 200kg), always beating A's $45.
+- **Executor**: Switching logistics (pickup schedule, bin size, contract terms) aren't described as differing between vendors, so no implementation friction should offset the cost gap.
+
+Survival line: Verdict and next move survive without the weakest premise (that Service B has no undisclosed caps/fees)? **Yes, provisionally** — even a modest overage in B's terms would need to be very large to erase a $12/month, ~27% cost gap; but this hasn't been confirmed, so it's flagged below.
+
+**Strongest caveat**: The breakeven math assumes Service B has no capacity cap and no fees beyond the stated $0.10/kg overage. That isn't stated in your framing — worth confirming before signing, though it's unlikely to flip the answer at 180kg.
+
+# ONE NEXT MOVE
+- Key question: Does Service B's actual contract have any capacity cap, minimum-volume clause, or additional fee beyond the $0.10/kg overage that isn't reflected in the stated pricing? (descriptive)
+- Result: The signed contract/rate sheet either confirms "no cap, no extra fees" (verdict holds — B cheaper by ~$12/month at 180kg) or reveals a cap/fee (recompute cost at 180kg with the new term before deciding).
+- Not in scope: Whether monthly volume might exceed 200-300kg in the future — not worth checking now since expected volume (180kg) sits comfortably below both A's 200kg cap and the 300kg breakeven.
+- Exercise: Request and review Service B's written rate sheet/contract terms directly from the provider before signing.
+- Evidence source: another person's answer (Service B's own contract/rate documentation).
+- Target: Service B (the vendor under consideration).
+- Done when: You have the written terms in hand and confirm no additional caps or fees apply.

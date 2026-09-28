@@ -1,0 +1,1 @@
+Our on-call plumbing vendor was on time for 7 of the last 10 emergency callouts we logged. Their new contract would raise the base fee from $300/month to $420/month, with the same callout terms otherwise. We expect about 10 callouts over the next quarter. Should we accept the new contract or look for a different vendor?
